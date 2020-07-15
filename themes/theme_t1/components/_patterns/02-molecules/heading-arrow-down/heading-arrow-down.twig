@@ -1,0 +1,11 @@
+{% set heading_arrow_down_base_class = 'heading-arrow-down' %}
+
+<div class="{{ heading_arrow_down_base_class }}">
+<{{tag|default('h2')}} {{ bem('title',[],heading_arrow_down_base_class)}}>
+  {{ title }}
+{% include "@atoms/04-images/icons/_icon.twig" with {
+  icon_name: 'red-angle-down',
+} %}
+</{{tag|default('h2')}}>
+
+</div>

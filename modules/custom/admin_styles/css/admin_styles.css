@@ -1,0 +1,8 @@
+
+
+#draggableviews-table-projects-page-1 tr:nth-of-type(36n-29) td,
+#draggableviews-table-projects-page-1 tr:nth-of-type(36n-18) td,
+#draggableviews-table-projects-page-1 tr:nth-of-type(36n-11) td,
+#draggableviews-table-projects-page-1 tr:nth-of-type(36n-4) td {
+	background: #98cd98 !important;
+}

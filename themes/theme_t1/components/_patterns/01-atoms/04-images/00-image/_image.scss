@@ -1,0 +1,32 @@
+@mixin img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+
+img,
+picture {
+  @include img;
+}
+
+figure {
+  margin: 0; //override normalize
+}
+
+.figure {
+  margin: 5rem 0;
+}
+.figure__caption {
+  @include fluid-type(600px, 1000px, 14px, 16px);
+  border-bottom: 1px solid $gray-lighter;
+  line-height: 1.2;
+  padding: 0.8em 0;
+  font-family: $header-font-family;
+  font-weight: 400;
+
+  small {
+    color: $medium-gray;
+    font-size: 1em;
+    font-weight: 300;
+  }
+}

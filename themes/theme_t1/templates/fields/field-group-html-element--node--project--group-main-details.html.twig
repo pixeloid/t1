@@ -1,0 +1,18 @@
+{% extends "@molecules/project-data/project-data.twig" %}
+{% block content %}
+
+<p>
+  <strong>
+    {% if element.field_design_end[0] %}
+      {{element.field_design_end[0]}} /
+    {% endif %} 
+    
+    {% if element.field_function[0] %}
+      {{element.field_function[0]}} /
+    {% endif %} 
+    
+    {{ element.field_category }}</strong>
+</p>    
+{{ element.field_project_properties}}
+{% endblock content %}
+

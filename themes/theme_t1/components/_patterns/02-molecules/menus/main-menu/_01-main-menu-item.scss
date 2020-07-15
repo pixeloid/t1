@@ -1,0 +1,92 @@
+// LI
+.main-menu__item {
+  display: block;
+  text-align: center;
+  border-bottom: 1px solid $medium-gray;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 5em;
+  max-height: 7em;
+
+  &:last-child{
+      border-bottom: none;
+  }
+
+  @include breakpoint($main-menu-medium) {
+    border-top: 0;
+
+    // Only top level
+    &:not(.main-menu__item--sub):hover {
+      transition: all 0.2s;
+
+      & > .main-menu--sub {
+        display: block;
+      }
+    }
+  }
+
+  &:hover {
+
+    .main-menu__link::after {
+      color: $gray;
+    }
+  }
+}
+
+// Expand Button
+.expand-sub {
+  background-color: $black;
+  color: $white;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  width: 20%;
+
+  @include breakpoint($main-menu-medium) {
+    display: none;
+  }
+
+  // Down triangle
+  &::after {
+    border: 15px solid;
+    border-bottom-color: transparent;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    content: "";
+    display: block;
+    margin-right: -12px;
+    margin-top: -6px;
+    position: absolute;
+    right: 50%;
+    top: 50%;
+    width: 0;
+  }
+
+  // See main-menu.js
+  &--open {
+    background-color: $black;
+    color: $near-white;
+
+    &::after {
+      border-bottom: 15px solid;
+      border-top-color: transparent;
+      margin-top: -20px;
+    }
+  }
+}
+
+//
+// Sub Navigation
+//
+// LI (Nested)
+.main-menu__item--sub {
+  @include breakpoint($main-menu-medium) {
+    display: block;
+
+    &:not(:first-child) {
+      border-top: 1px solid $gray-light;
+    }
+  }
+}

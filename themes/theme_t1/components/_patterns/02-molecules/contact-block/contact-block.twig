@@ -1,0 +1,34 @@
+{% set contact_block_base_class = 'contact-block' %}
+
+
+<div class="{{ contact_block_base_class }}">
+  <div {{bem('map', [], contact_block_base_class)}}>
+    {% block map %}
+      <img src="https://via.placeholder.com/1200x500.png?text=Contact Google Map Embed" alt="">
+    {% endblock map %}
+  </div>
+
+  <h2 {{bem('heading',[],contact_block_base_class)}}>
+    {{ heading }}
+  </h2>
+
+  <div class="grid-x grid-padding-x">
+    <div class="cell medium-6">
+      <h3 {{bem('address-heading',[],contact_block_base_class)}}> {{ address_heading|render|replace({'T1': '<span>T1</span>'})|raw }}</h3>
+      <ul {{bem('address-list',[],contact_block_base_class)}}>
+        {% for item in address_list  %}
+          <li>{{ item }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="cell medium-6">
+      <ul {{bem('field-list',[],contact_block_base_class)}}>
+        {% for item in fields %}
+          <li>
+            {{ item }}
+          </li>
+        {% endfor %}   
+      </ul> 
+    </div>
+  </div>
+</div>

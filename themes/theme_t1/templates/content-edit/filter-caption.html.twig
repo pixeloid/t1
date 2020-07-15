@@ -1,0 +1,8 @@
+{% embed "@atoms/04-images/00-image/figure.twig" with {
+  img_caption: caption,
+  img_author: content.field_credit[0]
+}%}
+{% block figure_content %}
+{{ node }}
+{% endblock figure_content %}
+{% endembed  %}

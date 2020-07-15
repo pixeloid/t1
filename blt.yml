@@ -1,0 +1,65 @@
+project:
+  local:
+    hostname: t1.drupal-sites.develop
+    protocol: https
+  machine_name: t1
+  human_name: t1
+drush:
+  aliases:
+    local: t1.local
+    remote: t1.staging
+drupal:
+  db:
+    database: drupal_t1
+    username: drupal
+    password: drupal
+    host: localhost
+    port: 3306
+
+cm:
+  core:
+    dirs:
+      sync:
+        path: ../config/t1
+
+# Custom tasks that are triggered at pre-defined times in the build process.
+# The tasks hook into BLT's existing commands.
+command-hooks:
+  # Executed when front end dependencies should be installed.
+  frontend-reqs:
+    # E.g., ${docroot}/themes/custom/mytheme
+    dir: ${docroot}/sites/t1/themes/theme_t1
+    # E.g., '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use 4.4.4 && npm install'
+    command: '. "$NVM_DIR/nvm.sh" && nvm install 10 && nvm install 8 && nvm use && npm install'
+  # Executed when front end assets should be generated.
+  frontend-assets:
+    # E.g., ${docroot}/themes/custom/mytheme
+    dir: ${docroot}/sites/t1/themes/theme_t1
+    # E.g., '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use 4.4.4 && npm build'
+    command: '[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" && nvm use && npm install -g gulp && npm rebuild node-sass && gulp build'
+  frontend-test:
+    # E.g., ${docroot}/themes/custom/mytheme
+    dir: ${docroot}
+    # E.g., `npm test`.
+    command: null
+  pre-commit:
+    # E.g., ${docroot}
+    dir: ${docroot}
+    # E.g., `php -l`.
+    command: null
+  # Executed before configuration is imported.
+  pre-config-import:
+    dir: ${docroot}
+    command: null
+  # Executed after deployment artifact is created.
+  post-deploy-build:
+    dir: '${deploy.dir}/docroot'
+    command: null
+  # Executed after source:build is run.
+  post-setup-build:
+    dir: ${docroot}
+    command: null
+  # Executed after deploy:push-all is run.
+  post-deploy:
+    dir: ${docroot}
+    command: null

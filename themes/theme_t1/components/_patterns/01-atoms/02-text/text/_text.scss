@@ -1,0 +1,198 @@
+// Create a mixin for paragraph styles that can be implemented
+// in components with other classnames.
+@mixin paragraph($margin: 0 0 1em) {
+  margin: #{$margin};
+}
+
+@mixin body-copy {
+  @include fluid-type(320px, 1000px, 16px, 19px);
+  line-height: 1.3em;
+}
+
+body {
+  @include body-copy;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.paragraph {
+  @include paragraph;
+}
+
+.blockquote {
+  font-family: $header-font-family;
+  border: 0;
+  border-left: 1px solid $gray-lighter;
+  margin: 4em 0 4em 4em;
+  padding: 0;
+  padding-left: 2.5em;
+  position: relative;
+  @include fluid-type(320px, 1000px, 13px, 30px);
+
+  &::before {
+    color: $gray-lighter;
+    content: "“";
+    display: block;
+    font-size: 9em;
+    font-weight: 200;
+    left: -0.5em;
+    line-height: 1;
+    position: absolute;
+    text-align: left;
+    top: -0.1em;
+  }
+
+  p {
+    font-size: inherit;
+    color: $black;
+    font-weight: normal;
+    line-height: 1.5;
+    text-align: left;
+  }
+
+  strong {
+    font-size: 0.7em;
+    font-family: $body-font-family;
+    font-style: italic;
+    font-weight: normal;
+    color: $gray-light;
+
+    &::before {
+      content: "- "
+    }
+  }
+
+  em {
+    font-size: 0.7em;
+    font-family: $body-font-family;
+    font-style: italic;
+    font-weight: 200;
+    color: $gray-light;
+
+    &::before {
+      content: ', ';
+      font-weight: normal;
+    }
+  }
+}
+
+.hr {
+  border-style: solid;
+  border-width: 1px 0 0;
+  color: currentColor;
+}
+
+// TODO: BEM selectors should be applied to wysiwyg-created content
+
+.cke_editable,
+.text-long {
+
+  max-width: $content-max-width;
+  margin: 0 auto;
+  padding: 4rem 1em;
+    @include breakpoint(medium) {
+  padding: 4rem 0;
+    }
+
+  p {
+    @extend .paragraph;
+    text-align: justify;
+    margin: 1em 0;
+    clear: both;
+    
+  }
+
+  a {
+    font-weight: 600;
+    display: inline-block;
+    @include link;
+  }
+
+  blockquote {
+    @extend .blockquote;
+  }
+
+  hr {
+    @extend .hr;
+  }
+
+  h2 {
+    margin: 4em 0 1.5em;
+    float: left;
+  }
+
+
+  .media {
+    padding: 10px 0;
+    @include breakpoint(medium) {
+      padding: 10px;
+    }
+    a {
+      padding: 0;
+      border: none;
+      display: block;
+    }
+
+    img {
+      display: block;
+      width: 100%;
+    }
+    &--default,
+    &--full-width {
+
+      clear: both;
+      @include breakpoint(1150px) {
+      }
+    }   
+    &--1-2-width {
+      @include breakpoint(medium) {
+        width: 50%;
+        float: left;
+      }
+
+    }   
+  }
+
+  figure {
+    clear: both;
+      .media {
+        padding: 0;
+      }
+
+          @include breakpoint(1150px) {
+            margin-left: -8vw;
+            margin-right: -8vw;
+          }
+  }
+
+  @include breakpoint(1200) {
+
+    .media--default,
+    .media--full-width {
+      margin: 0 -8vw;
+      display: inline-block;
+    }
+    .media--default,
+    .media--full-width,
+    p {
+      +.media--1-2-width {
+        width: calc(50% + 8vw);
+        margin-left: -8vw;
+
+        +.media--1-2-width {
+          width: calc(50% + 8vw);
+          margin-left: 0;
+          margin-right: -8vw;
+        }
+      }
+    }
+    
+
+    &+.media--1-2-width {
+      margin-right: -10px;
+      width: calc(50% + 10px);
+    }
+
+  }
+}

@@ -1,0 +1,29 @@
+{% set user_data_base_class = 'user-data' %}
+
+{% set img %}
+{% block image %}
+{% endblock image %}
+{% endset %}
+
+<div {{ bem(user_data_base_class)}}>
+    
+    {% embed "@molecules/card/01-card.twig" with {
+      "card_modifiers": ['nohover']
+    } %}
+    {% block card_img %}
+      {{  img }}
+    {% endblock card_img %}
+
+    {% endembed  %}
+  {% include "@atoms/02-text/00-headings/_heading.twig" with {
+    "heading_level": 2,
+    "heading": name,
+    "heading_blockname": user_data_base_class,
+    "heading_base_class": 'name',
+  } %}
+  {% include "@atoms/02-text/text/01-paragraph.twig" with {
+    "paragraph_content": description,
+    "paragraph_blockname": user_data_base_class,
+    "paragraph_base_class": 'description',
+  } %}
+</div>

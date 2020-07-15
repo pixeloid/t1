@@ -1,0 +1,5 @@
+services:
+  twig_extensions.pcre_extension:
+    class: Drupal\twig_extensions\PcreExtension
+    tags:
+      - { name: twig.extension }

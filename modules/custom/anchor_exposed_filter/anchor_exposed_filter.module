@@ -1,0 +1,72 @@
+<?php
+
+/**
+ * @file
+ * Contains anchor_exposed_filter.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function anchor_exposed_filter_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the anchor_exposed_filter module.
+    case 'help.page.anchor_exposed_filter':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Exposed filter using anchors') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+function anchor_exposed_filter_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id){
+    
+  /**
+   * Apply the form_alter to a specific form #id
+   * the form #id can be found through inspecting the markup
+   */
+  if($form['#id'] == 'views-exposed-form-frontpage-page-1') {
+  /**
+   * Include a js and css, which was defined in popolo_custom.libraries.yml
+   */
+  $form['#attached']['library'][] = 'anchor_exposed_filter/anchor_exposed_filter.enable';	
+  $form['#attached']['library'][] = 'anchor_exposed_filter/anchor_exposed_filter.forms';
+	/**
+	 * Extract the options from the Views Exposed Filter <select>-list 
+	 */
+  // var_dump(array_keys($form));
+  $links = $form['field_szures_kategoria_target_id']['#options'];
+
+  /**
+   * Iterate over the options ($links) to build an array ($pop_array) of links
+   */
+  $i = 0; // Initiate counter/index
+  $pop_array = array();
+	foreach ($links as $tid => $term_name) {
+    $class="";
+    if (@$_GET['field_szures_kategoria_target_id'] == $tid ) {
+      $class="active";
+    }
+
+			$pop_array[$i]['#markup'] = '<span class="filter-tab"><a href="" id="' .$tid . '" class="'.$class.'">' . $term_name . '</a></span>';
+		$i++; // Increase counter/index
+	} 
+	/**
+	 * Create the item-list the form should render
+	 */
+		$form['links'] = [
+			'#theme' => 'item_list',
+		  '#items' => $pop_array,
+		  '#attributes' => array('class' => array('pop-list')),
+		]; 
+	}
+  
+  else {
+  	//nothing...
+  } 
+}

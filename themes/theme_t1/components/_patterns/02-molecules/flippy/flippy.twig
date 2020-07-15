@@ -1,0 +1,29 @@
+<ul class="flippy">
+  {% if first %}
+  <li class="flippy-first">{{ first }}</li>
+  {% endif %}
+ 
+  <li class="flippy-previous">
+    {% if prev %}
+       {% include "@atoms/04-images/icons/_icon.twig" with {
+      icon_name: 'red-angle-left',
+    } %}
+
+    {{ prev }}
+    {% endif %}
+  </li>
+  {% if random %}
+  <li class="flippy-random">{{ random }}</li>
+  {% endif %}
+  <li class="flippy-next">
+    {% if next %}
+    {{ next }}
+    {% include "@atoms/04-images/icons/_icon.twig" with {
+      icon_name: 'red-angle-right',
+    } %}
+    {% endif %}
+  </li>
+  {% if last %}
+  <li class="flippy-last">{{ last }}</li>
+  {% endif %}
+</ul>

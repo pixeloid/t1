@@ -1,0 +1,18 @@
+{% set grid_base_class = 'grid-gallery' %}
+{{ attach_library('t1/grid-gallery')}}
+<div {{ bem(grid_base_class, (grid_modifiers)) }}>
+  {% block grid_content %}
+    {% for card in cards %}
+    <div {{ bem(card.base_class, (card.modifiers), grid_base_class, []) }}>
+
+      {% include "@molecules/card/01-card.twig" with {
+          "card_img_src": card.card_img_src,
+          "card_title": 'Lorem ipsum dolor sit amet .',
+          "card_body": 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. ',
+          "card_title_modifiers": ['title'],
+          "card_body_modifiers": ['body']
+        } %}
+    </div>
+    {% endfor %}
+  {% endblock %}
+</div>

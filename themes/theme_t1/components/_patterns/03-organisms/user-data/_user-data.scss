@@ -1,0 +1,22 @@
+.user-data {
+  max-width: 800px;
+  h2.user-data__name {
+    @include fluid-type(320px, 1600px, 18px, 22px);
+    letter-spacing: 0;
+    font-weight: 600;
+    border-left: none;
+    text-transform: none;
+    padding: 0;
+    margin-top: 1em;
+  }
+
+  &__description {
+    @include fluid-type(320px, 1600px, 16px, 18px);
+    font-weight: 300;
+    font-family: $header-font-family;
+    border-left: 4px solid $red;
+    line-height: 1.2;
+    padding-left: .8em;
+    margin-top: 1em;
+  }
+}

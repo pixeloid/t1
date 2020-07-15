@@ -1,0 +1,12 @@
+{% embed "@molecules/card/01-card.twig" with {
+        "card_title": fields.title.content,
+        "card_body": fields.field_description.content,
+        "card_title_modifiers": ['title'],
+        "card_modifiers": ['gradient'],
+        "card_body_modifiers": ['body'],
+        "card_link_url": fields.field_web.content|render|striptags|trim
+} %}
+{% block card_img %}
+{{ fields.field_logo.content }}
+{% endblock %}
+{% endembed %}

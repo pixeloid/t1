@@ -1,0 +1,20 @@
+/// Link
+$color-link: $body-font-color;
+$color-link--hover: $white;
+$bg-link: $medium-gray;
+
+@mixin link {
+  color: $color-link;
+  transition: all 0.6s ease;
+    border-bottom: 1px solid $bg-link;
+  padding: 0 3px;
+  &:hover {
+    transition: all 0.2s ease;
+    color: $color-link--hover;
+    background: $bg-link;
+  }
+}
+
+.link {
+  @include link;
+}

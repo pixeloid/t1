@@ -1,0 +1,14 @@
+{
+  "name": "drupal/project_view_mode",
+  "type": "drupal-module",
+  "description": "Project View mode",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/project_view_mode",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/project_view_mode",
+    "source": "http://cgit.drupalcode.org/project_view_mode"
+  },
+  "require": { }
+}

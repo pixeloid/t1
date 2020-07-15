@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="{{ htmlClass }}">
+  <head>
+    <title>{{ title }}</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Component styles -->
+    <link rel="stylesheet" href="../../../../dist/style.css?{{ cacheBuster }}" media="all" />
+
+    <!-- Drupal-specific usage -->
+    <!-- example using symlinking -->
+    <!-- cd web/themes/custom/emulsify/components/js -->
+    <!-- ln -s ../../../../../core/assets/vendor/domready/ready.min.js ./ -->
+    <!-- ln -s ../../../../../core/misc/drupal.js ./ -->
+
+    <!-- UNCOMMENT AS NECESSARY -->
+    <script src="../../js/ready.min.js"></script>
+    <script src="../../js/drupal.js"></script>
+
+    <!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+    {{ patternLabHead | raw }}
+    <!-- End Pattern Lab -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+  integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/js/foundation.min.js"
+      integrity="sha256-tdB5sxJ03S1jbwztV7NCvgqvMlVEvtcoJlgf62X49iM=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/swiper/js/swiper.min.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"/>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <script src="../../js/cycle.js"></script>
+    <script src="../../js/init.js"></script>
+<script>
+  // Attach all behaviors.
+  $(function () {
+    Drupal.attachBehaviors(document, Drupal.settings);
+  });
+</script>
+  </head>
+  <body class="{{ bodyClass }}">
+    <!-- for js not found errors in Pattern Lab -->
+  	<div class="visually-hidden">
+  		<div id="tabs" class="tabs"></div>
+  	</div>

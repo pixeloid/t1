@@ -1,0 +1,13 @@
+anchor_exposed_filter.forms:
+   version: VERSION
+   css:
+     theme:
+       css/anchor_exposed_filter.theme.css: {}
+
+anchor_exposed_filter.enable:
+  version: VERSION
+  js:
+    js/anchor_exposed_filter.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

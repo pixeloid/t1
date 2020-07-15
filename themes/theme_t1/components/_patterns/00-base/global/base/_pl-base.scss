@@ -1,0 +1,82 @@
+// These styles are specifically for Pattern Lab.
+// They are not used by the site in any way.
+
+.pl-template {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.sg-pattern-title {
+  color: $blue;
+  font-family: $header-font-family;
+  font-size: 1.4rem !important;
+  text-transform: none !important;
+
+  a {
+    color: $brown !important;
+    font-family: $header-font-family;
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: capitalize !important;
+  }
+}
+
+.pl,
+.sg-main {
+  .sg-subtype h2 {
+    background-color: $gray;
+    font-size: 2rem;
+    text-transform: uppercase;
+
+    a {
+      @include wrapper(
+        $v-padding: $space
+      );
+
+      color: $white;
+      display: block;
+      line-height: 1;
+      text-decoration: none;
+    }
+  }
+
+  .sg-pattern > div {
+    @include wrapper;
+  }
+
+  .sg-pattern-extra-info {
+    width: 55%;
+  }
+
+  .sg-pattern .sg-pattern-example {
+    margin-top: 2em;
+  }
+
+  .visually-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute !important;
+    width: 1px;
+    word-wrap: normal;
+  }
+
+  .sg-colors {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      flex: 0 0 100px;
+      margin: 0 0.5rem 1rem;
+    }
+
+    &__sample {
+      display: block;
+      height: 100px;
+      margin-bottom: 0.3em;
+    }
+  }
+}
