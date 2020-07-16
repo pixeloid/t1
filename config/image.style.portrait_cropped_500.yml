@@ -1,0 +1,15 @@
+uuid: 12584ba0-0a4f-42a6-9fce-af6111efd3ea
+langcode: hu
+status: true
+dependencies: {  }
+name: portrait_cropped_500
+label: 'Portrait Cropped 500'
+effects:
+  d73319c3-0e5f-4c08-98e7-c11ef4363791:
+    uuid: d73319c3-0e5f-4c08-98e7-c11ef4363791
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 670
+      anchor: center-center

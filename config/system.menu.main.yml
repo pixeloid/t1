@@ -1,0 +1,10 @@
+uuid: ab29e1ce-244e-4b54-8e78-7809c1a201b7
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: Q2Ra3jfoIVk0f3SjxJX61byRQFVBAbpzYDQOiY-kno8
+id: main
+label: 'Fő navigáció'
+description: 'Oldalszekció hivatkozások'
+locked: true

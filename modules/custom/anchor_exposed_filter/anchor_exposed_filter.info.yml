@@ -1,0 +1,5 @@
+name: Anchor exposed filter
+type: module
+description: Exposed filter using anchors
+core: 8.x
+package: Pixeloid

@@ -1,0 +1,29 @@
+uuid: 06db2fb7-d19a-4039-be82-6dcaa39eb260
+langcode: hu
+status: true
+dependencies:
+  config:
+    - image.style.portrait_cropped_500
+    - image.style.portrait_cropped_500_2x
+  theme:
+    - t1
+id: inline_portrait_half_
+label: 'Inline Portrait Half '
+image_style_mappings:
+  -
+    breakpoint_id: t1.xlarge
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: portrait_cropped_500_2x
+  -
+    breakpoint_id: t1.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: portrait_cropped_500
+  -
+    breakpoint_id: t1.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: portrait_cropped_500_2x
+breakpoint_group: t1
+fallback_image_style: portrait_cropped_500

@@ -1,0 +1,12 @@
+hero_content_base_class: 'content'
+hero_content_modifiers:
+  - centered
+hero_title:
+  "Test Title that is fairly long for a reason Test Title that is fairly long for a reason Test Title that is fairly long for a reason"
+hero_modifiers:
+hero_img_src:
+  "https://placeimg.com/2000/1200/nature"
+hero_link: "/stuff"
+hero_text:
+  "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui."
+# hero_button_text: Mauris blandit aliquet

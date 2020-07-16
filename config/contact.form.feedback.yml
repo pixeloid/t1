@@ -1,0 +1,14 @@
+uuid: dc0638d0-0512-4f1c-a1e5-1b24a1032c59
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: c4zaT5cyPxuTXI6JOWt3qRtMvICT9tHB6d9a5VG-CmQ
+id: feedback
+label: 'Visszajelzés a webhelyről'
+recipients:
+  - admin@example.com
+reply: ''
+weight: 0
+message: 'Your message has been sent.'
+redirect: ''

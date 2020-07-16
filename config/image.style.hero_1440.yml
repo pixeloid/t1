@@ -1,0 +1,15 @@
+uuid: 51f17599-dd50-48cf-88cc-bedd36b91d75
+langcode: hu
+status: true
+dependencies: {  }
+name: hero_1440
+label: 'Hero 1440'
+effects:
+  5c78205a-070e-4ebd-b025-8dca24b538d9:
+    uuid: 5c78205a-070e-4ebd-b025-8dca24b538d9
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1440
+      height: 750
+      anchor: center-center

@@ -1,0 +1,28 @@
+uuid: ca9c95a0-592f-4ee9-a18b-749200bd4a69
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_category
+    - node.type.project
+    - taxonomy.vocabulary.project_category
+id: node.project.field_category
+field_name: field_category
+entity_type: node
+bundle: project
+label: Kategória
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      project_category: project_category
+    sort:
+      field: _none
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

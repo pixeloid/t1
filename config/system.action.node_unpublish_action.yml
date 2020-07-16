@@ -1,0 +1,13 @@
+uuid: 5b3745ac-808b-413e-ad40-8365d8049358
+langcode: hu
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: gGQXiSspwGl0lyOS6w_HCPpvGAPDciqDNLFwWOydVtI
+id: node_unpublish_action
+label: 'Tartalom elrejtése'
+type: node
+plugin: 'entity:unpublish_action:node'
+configuration: {  }

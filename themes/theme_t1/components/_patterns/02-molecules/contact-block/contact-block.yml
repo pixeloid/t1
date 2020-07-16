@@ -1,0 +1,22 @@
+heading: Studio Contacts
+address_heading: T1 ÉPÍTÉSZ & BELSŐÉPÍTÉSZ IRODA
+address_list:
+  include():
+    pattern: atoms-list-field
+    with:
+      label_hidden: false
+      label: ez a labelll
+      items:
+        - 
+          content: H-1124 BUDAPEST, Csörsz utca 7. II. emelet - T1 ÉPÍTÉSZ IRODA 
+        - 
+          content: H-8200 VESZPRÉM, Kalmár tér 7. - KONZULTÁCIÓS IRODA
+        - 
+          content: H-9400 SOPRON, Határdomb u. 2. - KONZULTÁCIÓS IRODA
+    only: true
+
+fields:
+  email: info@t1epitesz.hu  
+  phone:  +36 30 27 71 045
+  web: www.t1epitesz.hu
+  info: T1 ÉPÍTÉSZ BETÉTI TÁRSASÁG - VESZPRÉM, Kalmár tér 7.

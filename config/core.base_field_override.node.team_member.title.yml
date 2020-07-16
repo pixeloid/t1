@@ -1,0 +1,18 @@
+uuid: 3b3abe0a-c1c4-41d8-8f2d-7057849cd927
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.team_member
+id: node.team_member.title
+field_name: title
+entity_type: node
+bundle: team_member
+label: Név
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

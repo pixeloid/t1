@@ -1,0 +1,8 @@
+uuid: adec810d-11a3-411f-a072-32999fac4603
+langcode: en
+status: true
+dependencies: {  }
+name: Címkék
+vid: project_category
+description: ''
+weight: 0

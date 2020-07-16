@@ -1,0 +1,19 @@
+uuid: 79d564ad-e4c3-4c28-9d83-e51f9b3b1bb5
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.storage.block_content.field_headline
+id: block_content.contact_block.field_headline
+field_name: field_headline
+entity_type: block_content
+bundle: contact_block
+label: Headline
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

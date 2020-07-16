@@ -1,0 +1,35 @@
+uuid: 721557e2-538b-43df-abe1-f6733aa451b2
+langcode: hu
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.carousel
+    - field.field.media.image.field_credit
+    - field.field.media.image.field_display_title
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.carousel_square
+  module:
+    - responsive_image
+id: media.image.carousel
+targetEntityType: media
+bundle: image
+mode: carousel
+content:
+  field_media_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: carousel_square
+      image_link: file
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_credit: true
+  field_display_title: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

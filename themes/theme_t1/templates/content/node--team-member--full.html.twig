@@ -1,0 +1,15 @@
+{% embed "@pages/team-member/team-member.twig" with {
+  team_member_name: label,
+  team_member_description: content.field_description.0,
+  team_member_body: content.body,
+  team_member_back_url: path('entity.node.canonical', {'node': 111}),
+  team_member_back_text: 'Back to the Studio'|t
+} %}
+
+  {% block image %}
+  {{ content.field_cover_image_media.0 }}
+  {% endblock image %}
+  
+{% endembed  %}
+ 
+

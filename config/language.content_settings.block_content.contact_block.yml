@@ -1,0 +1,11 @@
+uuid: 8883bc40-8ccd-428a-b7e2-2f586ad0865e
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+id: block_content.contact_block
+target_entity_type_id: block_content
+target_bundle: contact_block
+default_langcode: site_default
+language_alterable: false

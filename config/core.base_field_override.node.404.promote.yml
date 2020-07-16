@@ -1,0 +1,22 @@
+uuid: 902f8ca5-4cb0-40b9-9185-ecd96a6cffd3
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.404
+id: node.404.promote
+field_name: promote
+entity_type: node
+bundle: '404'
+label: 'Promoted to front page'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

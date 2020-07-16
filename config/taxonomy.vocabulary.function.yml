@@ -1,0 +1,8 @@
+uuid: 7c3ac75d-4c79-4664-9e02-89f9a8184f7c
+langcode: hu
+status: true
+dependencies: {  }
+name: Funkció
+vid: function
+description: ''
+weight: 0

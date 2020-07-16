@@ -1,0 +1,16 @@
+uuid: da45b893-e939-4e9e-9346-5e28bd00547e
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.team_member
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: node.team_member
+target_entity_type_id: node
+target_bundle: team_member
+default_langcode: site_default
+language_alterable: true

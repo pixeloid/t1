@@ -1,0 +1,10 @@
+uuid: ce9ef73a-3d0e-416f-a4c6-a8cd212278ea
+langcode: hu
+status: true
+dependencies:
+  module:
+    - media
+id: media.inline_1_2_portrait
+label: 'Inline 1/2 Portrait'
+targetEntityType: media
+cache: true

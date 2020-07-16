@@ -1,0 +1,51 @@
+uuid: 8ddd64ee-17b7-47d2-9eb7-9170eec201af
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.field.node.article.body
+    - field.field.node.article.field_cover_image_media
+    - field.field.node.article.field_hero_image_media
+    - field.field.node.article.field_subtitle
+    - node.type.article
+  module:
+    - text
+    - user
+_core:
+  default_config_hash: JtAg_-waIt1quMtdDtHIaXJMxvTuSmxW7bWyO6Zd68E
+id: node.article.default
+targetEntityType: node
+bundle: article
+mode: default
+content:
+  body:
+    type: text_default
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    label: hidden
+    region: content
+  field_hero_image_media:
+    weight: 3
+    label: hidden
+    settings:
+      view_mode: hero
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_entity_view
+    region: content
+  field_subtitle:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  links:
+    weight: 1
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden:
+  field_cover_image_media: true
+  langcode: true

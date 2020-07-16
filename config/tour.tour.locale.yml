@@ -1,0 +1,75 @@
+uuid: 8b95f14d-caf6-4bed-b469-bc703cede669
+langcode: hu
+status: true
+dependencies:
+  module:
+    - locale
+_core:
+  default_config_hash: 2RuPjrDfA8rPp1mcEzIYMz7RRJQLfovwJuJnuosFu2Y
+id: locale
+label: Fordítás
+module: locale
+routes:
+  -
+    route_name: locale.translate_page
+tips:
+  locale-overview:
+    id: locale-overview
+    plugin: text
+    label: 'Felhasználói felület fordítása'
+    body: 'Itt fordítható le a felhasználói felület és módosíthatók a meglevő fordítások. Ha a webhely eredetileg angolul lett telepítve, először egy másikat kell hozzáadni a <a href="[site:url]/admin/config/regional/language">Nyelvek oldalon</a>.'
+    weight: 1
+  locale-language:
+    id: locale-language
+    plugin: text
+    label: 'Fordítás nyelve'
+    body: 'A fordítani kívánt nyelv kiválasztása'
+    weight: 2
+    attributes:
+      data-id: edit-langcode
+  locale-search:
+    id: locale-search
+    plugin: text
+    label: Keresés
+    body: 'Meg kell adni egy szórészletet, a fordítani kívánt szót vagy teljes mondatot a kereséshez.'
+    weight: 3
+    attributes:
+      data-id: edit-string
+  locale-filter:
+    id: locale-filter
+    plugin: text
+    label: 'A keresés szűrése'
+    body: 'Új fordítás beküldéséhez a még nem lefordított, meglevő fordítások módosításához pedig a már lefordított karaktersorozatokban kell keresni.'
+    weight: 4
+    attributes:
+      data-id: edit-translation
+  locale-submit:
+    id: locale-submit
+    plugin: text
+    label: 'Keresési feltételek alkalmazása'
+    body: 'A keresési feltételek alkalmazása a <em>Szűrő</em> gombra kattintással lehetséges.'
+    weight: 5
+    attributes:
+      data-id: edit-submit
+  locale-translate:
+    id: locale-translate
+    plugin: text
+    label: Fordítás
+    body: 'A jobb oszlopban található szövegmezőkbe írhatók a saját fordítások. A megfelelő fordítás eléréséhez érdemes átgondolni, milyen környezetben lesznek használva.'
+    weight: 6
+    attributes:
+      data-class: js-form-type-textarea
+  locale-validate:
+    id: locale-validate
+    plugin: text
+    label: 'Fordítás érvényesítése'
+    body: 'A fordítás befejezése után a <em>Fordítások mentése</em> gombra kell kattintani. Oldalváltás vagy új keresés előtt a változtatásokat el kell menteni.'
+    weight: 7
+    attributes:
+      data-id: edit-submit--2
+  locale-continue:
+    id: locale-continue
+    plugin: text
+    label: Folytatás
+    body: 'A lefordított kifejezések ennek a webhelynek a felhasználói felületén lesznek használva. Másik webhelyen, vagy külső fordítóprogramban való használathoz <a href="[site:url]/admin/config/regional/translate/export">exportálhatók</a> egy .po fájlba és később vissza is <a href="[site:url]/admin/config/regional/translate/import">importálhatók</a>.'
+    weight: 8

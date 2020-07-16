@@ -1,0 +1,29 @@
+uuid: b3acf1b1-f92d-4321-92f3-72d8729346a4
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_property_name
+    - paragraphs.paragraphs_type.properties
+    - taxonomy.vocabulary.project_properties
+id: paragraph.properties.field_property_name
+field_name: field_property_name
+entity_type: paragraph
+bundle: properties
+label: Név
+description: 'Pl: "Építész: Török Szabolcs Bence" esetén az "Építész"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:taxonomy_term'
+  handler_settings:
+    target_bundles:
+      project_properties: project_properties
+    sort:
+      field: name
+      direction: asc
+    auto_create: true
+    auto_create_bundle: ''
+field_type: entity_reference

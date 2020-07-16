@@ -1,0 +1,42 @@
+uuid: db38abeb-230e-409a-82a7-dc8cf910c55a
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.properties.field_newline
+    - field.field.paragraph.properties.field_property_name
+    - field.field.paragraph.properties.field_property_value
+    - paragraphs.paragraphs_type.properties
+id: paragraph.properties.default
+targetEntityType: paragraph
+bundle: properties
+mode: default
+content:
+  field_newline:
+    weight: 2
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_property_name:
+    weight: 0
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_property_value:
+    weight: 1
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+hidden:
+  created: true
+  status: true

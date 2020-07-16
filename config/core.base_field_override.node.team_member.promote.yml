@@ -1,0 +1,22 @@
+uuid: b2c7f97c-35a3-4f54-8862-7589895803d0
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.team_member
+id: node.team_member.promote
+field_name: promote
+entity_type: node
+bundle: team_member
+label: 'Címlapra helyezve'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: Be
+  off_label: Ki
+field_type: boolean

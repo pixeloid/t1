@@ -1,0 +1,24 @@
+uuid: 7aa081fa-9067-4a8b-b7a8-44a43ebd31ad
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.field.node.404.body
+    - node.type.404
+  module:
+    - text
+    - user
+id: node.404.default
+targetEntityType: node
+bundle: '404'
+mode: default
+content:
+  body:
+    label: hidden
+    type: text_default
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

@@ -1,0 +1,19 @@
+uuid: 67e47351-5989-4c13-afeb-52dd44f9e2bf
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_property_value
+    - paragraphs.paragraphs_type.properties
+id: paragraph.properties.field_property_value
+field_name: field_property_value
+entity_type: paragraph
+bundle: properties
+label: Érték
+description: 'Pl: "Építész: Török Szabolcs Bence" esetén "Török Szabolcs Bence"'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

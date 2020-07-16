@@ -1,0 +1,35 @@
+uuid: 4aff035f-e76f-464b-968b-3dbbe13d8ffa
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: team_member
+label: 'Team Member'
+type: 'canonical_entities:node'
+pattern: 'team/[node:title]'
+selection_criteria:
+  48a3e166-beea-454d-b500-b68a518385b2:
+    id: node_type
+    bundles:
+      team_member: team_member
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 48a3e166-beea-454d-b500-b68a518385b2
+  3d7707a6-f5b3-4fa6-b633-dec8295acda0:
+    id: language
+    langcodes:
+      hu: hu
+      de: de
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: 3d7707a6-f5b3-4fa6-b633-dec8295acda0
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

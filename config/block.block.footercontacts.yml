@@ -1,0 +1,25 @@
+uuid: b3de22e4-8d01-4f22-b95c-f0019d29bcd0
+langcode: hu
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:cc167227-f559-4da5-a73c-2d302149f639'
+  module:
+    - block_content
+  theme:
+    - t1
+id: footercontacts
+theme: t1
+region: footer
+weight: -2
+provider: null
+plugin: 'block_content:cc167227-f559-4da5-a73c-2d302149f639'
+settings:
+  id: 'block_content:cc167227-f559-4da5-a73c-2d302149f639'
+  label: 'Footer contacts'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

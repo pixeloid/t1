@@ -1,0 +1,10 @@
+uuid: 5c1d1247-28d8-4b7c-836d-df8d9bf0f5d9
+langcode: hu
+status: true
+dependencies:
+  module:
+    - media
+id: media.carousel
+label: Carousel
+targetEntityType: media
+cache: true

@@ -1,0 +1,8 @@
+uuid: 4af7eedc-73a2-43d0-829a-229ac42bb15d
+langcode: hu
+status: true
+dependencies: {  }
+name: 'Project properties'
+vid: project_properties
+description: ''
+weight: 0

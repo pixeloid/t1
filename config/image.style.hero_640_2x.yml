@@ -1,0 +1,15 @@
+uuid: b7809707-79c1-4485-b7cf-bdae99cdf78f
+langcode: hu
+status: true
+dependencies: {  }
+name: hero_640_2x
+label: 'Hero 640@2x'
+effects:
+  d6c2a304-e386-4037-8a68-63336e699306:
+    uuid: d6c2a304-e386-4037-8a68-63336e699306
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1280
+      height: 1280
+      anchor: center-center

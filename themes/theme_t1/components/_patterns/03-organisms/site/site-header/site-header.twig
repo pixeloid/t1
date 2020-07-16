@@ -1,0 +1,14 @@
+{{ attach_library('t1/site-header') }}
+<header class="site-header" id="siteheader" data-toggler=".open">
+  {% block header_content %}
+    {% include "@atoms/04-images/icons/_icon.twig" with {
+      icon_base_class: 'logo',
+      icon_blockname: 'site-header',
+      icon_name: 'logo-full',
+    } %}
+    {% include "@molecules/menus/main-menu/main-menu.twig" %}
+  {% endblock %}
+    <div data-toggle="siteheader hamburger">
+      {% include "@molecules/hamburger/hamburger.twig" %}
+    </div>
+</header>

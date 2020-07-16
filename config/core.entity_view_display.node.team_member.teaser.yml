@@ -1,0 +1,53 @@
+uuid: 29c7111c-948d-436a-ab9d-dde28d173433
+langcode: hu
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.team_member.body
+    - field.field.node.team_member.field_cover_image_media
+    - field.field.node.team_member.field_description
+    - field.field.node.team_member.field_type
+    - field.field.node.team_member.field_web
+    - node.type.team_member
+  module:
+    - link
+    - user
+id: node.team_member.teaser
+targetEntityType: node
+bundle: team_member
+mode: teaser
+content:
+  field_cover_image_media:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: grid_item
+      link: false
+    third_party_settings: {  }
+  field_description:
+    type: basic_string
+    weight: 1
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_web:
+    type: link
+    weight: 2
+    region: content
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+hidden:
+  body: true
+  field_type: true
+  langcode: true
+  links: true

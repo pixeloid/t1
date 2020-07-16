@@ -1,0 +1,28 @@
+uuid: 4fb2c3ef-65cc-4672-ac19-97ea0ed2669f
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover_image_media
+    - media.type.image
+    - node.type.partner
+id: node.partner.field_cover_image_media
+field_name: field_cover_image_media
+entity_type: node
+bundle: partner
+label: 'Cover Image Media'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

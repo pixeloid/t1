@@ -1,0 +1,26 @@
+.node--team-member {
+  margin-top: 3rem;
+
+  .cell {
+    padding: 0 2rem;
+  }
+
+  .text-long {
+    padding-left: 0;
+    padding-right: 0;
+    @include breakpoint(large) {
+      padding-top: 0;
+      padding-bottom: 1em;
+    }
+
+    > * {
+      margin-top: 0;
+    }
+  }
+
+  .large-8 {
+    @include breakpoint(large) {
+      padding-left: 3rem;
+    }
+  }
+}

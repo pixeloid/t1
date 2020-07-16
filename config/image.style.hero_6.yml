@@ -1,0 +1,15 @@
+uuid: 029692b7-0d12-47ad-9602-d8d5e939e9bb
+langcode: hu
+status: true
+dependencies: {  }
+name: hero_6
+label: 'Hero 640'
+effects:
+  d6c2a304-e386-4037-8a68-63336e699306:
+    uuid: d6c2a304-e386-4037-8a68-63336e699306
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 640
+      height: 640
+      anchor: center-center

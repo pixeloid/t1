@@ -1,0 +1,53 @@
+{% set hero_base_class = hero_base_class|default('hero') %}
+{{ attach_library('t1/hero') }}
+<div {{ bem(hero_base_class, (hero_modifiers), hero_blockname) }}>
+  <div {{ bem('image', null, hero_base_class) }}>
+  {% block hero_img %}
+  {% if hero_img_src %}
+  {% include "@atoms/04-images/00-image/responsive-image.twig" with {
+            "img_url": hero_img_url|default(hero_link_url),
+            "img_src": hero_img_src,
+            "img_alt": hero_img_alt,
+            "responsive_image_base_class": 'image',
+            "responsive_image_blockname": hero_base_class,
+          } %}
+  {% endif %}
+  {% endblock %}
+  </div>
+
+  <div {{ bem('content', (hero_content_modifiers), hero_base_class) }}>
+
+
+    {% include "@atoms/04-images/icons/_icon.twig" with {
+      icon_base_class: 'icon',
+      icon_blockname: hero_base_class,
+      icon_name: 'logo-white',
+    } %}
+
+
+
+    {% if hero_title %}
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading_level": 1,
+        "heading": hero_title,
+        "heading_blockname": hero_base_class,
+        "heading_base_class": 'title',
+      } %}
+    {% endif %}
+    <hr>
+    {% if hero_text %}
+      {% include "@atoms/02-text/text/01-paragraph.twig" with {
+        "paragraph_content": hero_text,
+        "paragraph_blockname": hero_base_class,
+        "paragraph_base_class": hero_body_base_class|default('body'),
+      } %}
+    {% endif %}
+
+    {% if hero_button_text %}
+      {% include "@atoms/06-buttons/01-button.twig" with {
+        "button_content": hero_button_text,
+        "button_modifiers": ['alt'],
+      } %}    
+    {% endif %}
+    </div>
+</div>

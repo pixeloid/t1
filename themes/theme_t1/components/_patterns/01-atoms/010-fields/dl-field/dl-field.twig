@@ -1,0 +1,15 @@
+
+{% set list_field_base_class = 'dl-field' %}
+
+
+
+<dl {{ bem(list_field_base_class, list_field_modifiers|default([])) }}>
+
+  <dt{{title_attributes}}>{{ label }}</dt>
+    {% for item in items %}
+      <dd{{item.attributes}}>{{ item.content }}</dd>
+    {% endfor %}
+
+</dl>
+
+

@@ -1,0 +1,13 @@
+.list-field {
+  font-family: $header-font-family;
+  font-weight: 400;
+  line-height: 1;
+
+  &__list {
+    margin-left: 0.3em;
+
+    li {
+      line-height: 1.2;
+    }
+  }
+}

@@ -1,0 +1,8 @@
+uuid: 72f35b23-124a-4e1d-a527-634ad8ee9da8
+langcode: hu
+status: true
+dependencies: {  }
+_core:
+  default_config_hash: U5VlGjd_SfV0Qm_EfnaynOfc549cNscFAx48JfYoMRI
+id: default
+label: Alapértelmezés

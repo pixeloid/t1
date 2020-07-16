@@ -1,0 +1,51 @@
+uuid: e4481a08-c285-4198-9c63-368d016b5820
+langcode: hu
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: eYyOjXVghEin1Ed7t7vr9X0dSn018_zeZegu2Ao-j4Q
+id: language-edit
+label: 'Nyelvek szerkesztése'
+module: language
+routes:
+  -
+    route_name: entity.configurable_language.edit_form
+tips:
+  language-edit-overview:
+    id: language-edit-overview
+    plugin: text
+    label: 'Nyelvek szerkesztése'
+    body: '<p>Ez az oldal lehetővé teszi a webhely egy nyelvének szerkesztését, beleértve az egyéni nyelveket is.</p>'
+    weight: 1
+  language-edit-langcode:
+    id: language-edit-langcode
+    plugin: text
+    label: Nyelvkód
+    body: '<p>Nem módosítható a webhelyen a nyelv kódja, mivel azt a rendszer a nyelv nyomonkövetésére használja.</p>'
+    weight: 2
+    attributes:
+      data-id: edit-langcode-view
+  language-edit-label:
+    id: language-edit-label
+    plugin: text
+    label: 'Nyelv neve'
+    body: '<p>A nyelv neve több helyen megjelenik a webhelyen és angolul írandó. Az <em>Interface Translation</em> modul segítségével csak a beépített nyelvek nevei, a <em>Configuration Translation</em> modullal pedig mind a beépített, mind az egyedi nyelvek nevei lefordíthatók.</p>'
+    weight: 3
+    attributes:
+      data-id: edit-label
+  language-edit-direction:
+    id: language-edit-direction
+    plugin: text
+    label: 'Nyelv iránya'
+    body: '<p>Ki lehet választani, hogy a nyelv „Balról jobbra” vagy „Jobbról balra” szövegirányú.</p><p>Nem minden smink támogatja azonban a „Jobbról balra” szövegirányt, ezt a beállítás előtt érdemes ellenőrizni.</p>'
+    weight: 4
+    attributes:
+      data-id: edit-direction--wrapper--description
+  language-edit-continue:
+    id: language-edit-continue
+    plugin: text
+    label: Folytatás
+    body: '<p>Most, a „Nyelv szerkesztése” oldal áttekintése után a következőkkel lehet folytatni:<ul><li>Egy nyelv szerkesztése</li><li><a href="[site:url]/admin/config/regional/language">Beállított nyelvek megtekintése</a></li></ul></p>'
+    weight: 5

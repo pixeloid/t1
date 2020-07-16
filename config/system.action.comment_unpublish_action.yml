@@ -1,0 +1,13 @@
+uuid: 435ff997-e413-4cf7-b6e9-9960e82fe2f7
+langcode: hu
+status: true
+dependencies:
+  module:
+    - comment
+_core:
+  default_config_hash: MLin6S_PsJ7Oo480DxS46D46IM8tqFkkWOLyH7TGByI
+id: comment_unpublish_action
+label: 'A hozzászólás elrejtése'
+type: comment
+plugin: 'entity:unpublish_action:comment'
+configuration: {  }

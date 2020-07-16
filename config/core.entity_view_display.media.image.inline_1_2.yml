@@ -1,0 +1,35 @@
+uuid: 76af39c3-f29a-41c7-a733-7c2491f19573
+langcode: hu
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.inline_1_2
+    - field.field.media.image.field_credit
+    - field.field.media.image.field_display_title
+    - field.field.media.image.field_media_image
+    - media.type.image
+    - responsive_image.styles.inline_landscape_half_
+  module:
+    - responsive_image
+id: media.image.inline_1_2
+targetEntityType: media
+bundle: image
+mode: inline_1_2
+content:
+  field_media_image:
+    type: responsive_image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      responsive_image_style: inline_landscape_half_
+      image_link: file
+    third_party_settings: {  }
+hidden:
+  created: true
+  field_credit: true
+  field_display_title: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,16 @@
+
+
+$hamburger-padding-x : 15px;
+$hamburger-padding-y : 15px;
+$hamburger-layer-width : 24px;
+$hamburger-layer-height : 3px;
+$hamburger-layer-spacing : 6px;
+$hamburger-active-layer-color: $red;
+$hamburger-hover-opacity: 1;
+
+@import "hamburgers/_sass/hamburgers/hamburgers";
+
+
+.hamburger {
+  z-index: 110;
+}

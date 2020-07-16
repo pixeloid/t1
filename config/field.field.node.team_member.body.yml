@@ -1,0 +1,23 @@
+uuid: 88623279-86a9-47dd-a2e6-99d0bad93571
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.body
+    - node.type.team_member
+  module:
+    - text
+id: node.team_member.body
+field_name: body
+entity_type: node
+bundle: team_member
+label: Body
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: true
+  required_summary: false
+field_type: text_with_summary

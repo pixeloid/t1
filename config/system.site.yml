@@ -1,0 +1,14 @@
+uuid: 0b47a255-c37c-40fa-b2ce-669974c9b2aa
+name: 'T1 Studio honlapja'
+mail: noreply@t1epitesz.hu
+slogan: 'Professzionális építészeti és belsőépítészeti tervezés'
+page:
+  403: ''
+  404: /node/69
+  front: /node/109
+admin_compact_mode: false
+weight_select_max: 100
+langcode: hu
+default_langcode: hu
+_core:
+  default_config_hash: yXadRE77Va-G6dxhd2kPYapAvbnSvTF6hO4oXiOEynI

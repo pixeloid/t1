@@ -1,0 +1,6 @@
+<?php
+
+
+function admin_styles_toolbar_alter(array &$items) {
+  $items['administration']['#attached']['library'][] = 'admin_styles/admin_styles';
+}

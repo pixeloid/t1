@@ -1,0 +1,19 @@
+uuid: 09a91069-e4a4-4264-8f46-a1cdf1e5e04d
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.storage.block_content.field_address_headline
+id: block_content.contact_block.field_address_headline
+field_name: field_address_headline
+entity_type: block_content
+bundle: contact_block
+label: 'Address headline'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

@@ -1,0 +1,40 @@
+{% set node_modifiers = ['team-member'] %}
+
+{% extends "@organisms/_node.twig" %}
+
+
+{% set blockImage %}
+  {% block image %}
+  {% endblock image %}
+{% endset %}
+
+{% block content %}
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x">
+      <div class="cell large-4">
+
+        {% embed "@organisms/user-data/user-data.twig" with {
+            'name': team_member_name,
+            'description': team_member_description 
+          }%}
+          {% block image %}
+            {{ blockImage }}            
+          {% endblock image %}
+        {% endembed  %}
+      </div>
+      <div class="cell large-8">
+        {{team_member_body}}
+        
+        {% include "@atoms/01-links/link-icon/link-icon.twig" with {
+          link_icon: 'red-angle-left',
+          link_content: team_member_back_text,
+          link_url: team_member_back_url,
+          
+        }%}
+        <br><br>
+      </div>
+    </div>
+  </div>
+{% endblock content %}
+
+

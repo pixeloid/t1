@@ -1,0 +1,49 @@
+uuid: 486e4058-f620-43b7-8641-37f05a123dc7
+langcode: hu
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.partner.field_cover_image_media
+    - field.field.node.partner.field_description
+    - field.field.node.partner.field_logo
+    - field.field.node.partner.field_type
+    - field.field.node.partner.field_web
+    - node.type.partner
+  module:
+    - user
+id: node.partner.teaser
+targetEntityType: node
+bundle: partner
+mode: teaser
+content:
+  field_cover_image_media:
+    type: entity_reference_entity_view
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      view_mode: grid_item
+      link: false
+    third_party_settings: {  }
+  field_description:
+    type: basic_string
+    weight: 2
+    region: content
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+  field_logo:
+    type: entity_reference_entity_view
+    weight: 1
+    region: content
+    label: hidden
+    settings:
+      view_mode: grid_item
+      link: false
+    third_party_settings: {  }
+hidden:
+  field_type: true
+  field_web: true
+  langcode: true
+  links: true

@@ -1,0 +1,23 @@
+
+{% set list_field_base_class = 'list-field' %}
+
+
+
+<div {{ bem(list_field_base_class, list_field_modifiers|default([])) }}>
+
+  {% if not label_hidden %}
+  <div {{ bem('label', [], list_field_base_class) }}>
+    <div{{title_attributes}}>{{ label }}</div>
+  </div>
+  {% endif %}
+  <ul {{ bem('list', [], list_field_base_class) }}>
+
+    {% for item in items %}
+      <li{{item.attributes}}>{{ item.content }}</li>
+    {% endfor %}
+  </ul>
+
+
+</div>
+
+

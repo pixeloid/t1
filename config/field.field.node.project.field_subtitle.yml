@@ -1,0 +1,19 @@
+uuid: 30cd04f3-ec51-4979-9037-0931ecb001a0
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_subtitle
+    - node.type.project
+id: node.project.field_subtitle
+field_name: field_subtitle
+entity_type: node
+bundle: project
+label: Alcím
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

@@ -1,0 +1,22 @@
+card_modifiers:
+  1:
+    gradient
+  2:
+    logo
+
+card_img_src: https://res.cloudinary.com/dyrfvclos/image/upload/v1583149855/Asset_6_2x_kelgy2.png
+# Title
+card_title:
+  'This is a card-bg title'
+
+# Subtitle
+card_subtitle:
+
+# Link
+card_link_url:
+
+# Button
+card_button_url:
+  '#'
+card_button_content:
+  'Read more'

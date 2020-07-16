@@ -1,0 +1,15 @@
+uuid: 4e4792e3-cdab-4139-9023-c86e846964a1
+langcode: hu
+status: true
+dependencies: {  }
+name: inline_900_2x
+label: 'Inline 1200@2x'
+effects:
+  e8b60a0d-75cc-4133-a84a-af1ac529b1fc:
+    uuid: e8b60a0d-75cc-4133-a84a-af1ac529b1fc
+    id: image_scale
+    weight: 1
+    data:
+      width: 2400
+      height: null
+      upscale: true

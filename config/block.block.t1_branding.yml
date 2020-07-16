@@ -1,0 +1,25 @@
+uuid: 95a81a32-180d-4127-b2dd-3207dcd8c04d
+langcode: hu
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - t1
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: t1_branding
+theme: t1
+region: header
+weight: -7
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Webhely márkázása'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

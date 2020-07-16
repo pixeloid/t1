@@ -1,0 +1,18 @@
+uuid: 3c143e5c-d43d-4e34-8502-0503e7a1c1ee
+langcode: hu
+status: true
+dependencies:
+  config:
+    - node.type.partner
+id: node.partner.title
+field_name: title
+entity_type: node
+bundle: partner
+label: Név
+description: ''
+required: true
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

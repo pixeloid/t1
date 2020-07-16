@@ -1,0 +1,41 @@
+.project-data {
+  @include fluid-type(320px, 1000px, 12px, 14px);
+  max-width: $content-max-width;
+  font-family: $header-font-family;
+  padding: 1.5em;
+  border: 1px solid $medium-gray;
+
+  @include breakpoint(medium) {
+    margin: 0 auto;
+  }
+
+  @include breakpoint(1400px) {
+    margin-top: -4.5rem;
+  }
+  &__inner {
+    border-left: 5px solid $red;
+    padding-left: 1.4em;
+    p {
+    text-transform: uppercase;
+      margin: 0;
+    }
+  }
+
+  dl {
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0;
+    dd:not(:last-of-type) {
+      &:after {
+        content: "|";
+      }
+      margin-right: 0.5em;
+    }
+    dt {
+      font-weight: 400;
+      margin: 0;
+    }
+  }
+}

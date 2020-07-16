@@ -1,0 +1,10 @@
+uuid: d34c6ec8-5972-42bb-a0c7-b17b5b5199c2
+langcode: hu
+status: true
+dependencies:
+  module:
+    - media
+id: media.grid_item
+label: 'Grid item'
+targetEntityType: media
+cache: true

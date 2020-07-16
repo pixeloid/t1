@@ -1,0 +1,15 @@
+uuid: d0f85473-edef-498b-8243-5e5cbaf7e3e5
+langcode: hu
+status: true
+dependencies: {  }
+name: hero_1920_2x
+label: 'Hero 1920@2x'
+effects:
+  a3a36557-d1d1-46e3-936a-993a75d10899:
+    uuid: a3a36557-d1d1-46e3-936a-993a75d10899
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 3840
+      height: 2000
+      anchor: center-center

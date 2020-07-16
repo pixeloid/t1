@@ -1,0 +1,15 @@
+uuid: 183d74ac-71e1-4737-a113-17af72290070
+langcode: hu
+status: true
+dependencies: {  }
+name: hero_1024_2x
+label: 'Hero 1024@2x'
+effects:
+  98d65b3a-b947-4b9b-9201-7a93fd3a0b10:
+    uuid: 98d65b3a-b947-4b9b-9201-7a93fd3a0b10
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 2048
+      height: 1070
+      anchor: center-center

@@ -1,0 +1,15 @@
+uuid: 6c458983-d300-49ef-b1bb-597fa71c21a9
+langcode: hu
+status: true
+dependencies: {  }
+name: portrait_cropped_500_2x
+label: 'Portrait Cropped 500@2x'
+effects:
+  0f1c5452-4922-4f6d-8b48-b576158eef45:
+    uuid: 0f1c5452-4922-4f6d-8b48-b576158eef45
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 1340
+      anchor: center-center

@@ -1,0 +1,11 @@
+uuid: 29daaa7e-401c-4202-8210-1f3b03ee57b8
+langcode: hu
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.project_properties
+id: taxonomy_term.project_properties
+target_entity_type_id: taxonomy_term
+target_bundle: project_properties
+default_langcode: site_default
+language_alterable: false

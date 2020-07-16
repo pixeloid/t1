@@ -1,0 +1,32 @@
+uuid: e82d0227-1738-477e-8bce-0850eebef60c
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_cover_image_media
+    - media.type.image
+    - node.type.team_member
+  content:
+    - 'media:image:72fe2b39-e443-4e4b-9846-b0496b3a9de3'
+id: node.team_member.field_cover_image_media
+field_name: field_cover_image_media
+entity_type: node
+bundle: team_member
+label: 'Cover Image Media'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    target_uuid: 72fe2b39-e443-4e4b-9846-b0496b3a9de3
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

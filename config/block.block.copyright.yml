@@ -1,0 +1,25 @@
+uuid: 1972cfc2-3b5a-42a3-84a4-5d5d63958584
+langcode: hu
+status: true
+dependencies:
+  content:
+    - 'block_content:basic:39e4c4bf-4da4-4b7b-8c24-bebc51ccffa7'
+  module:
+    - block_content
+  theme:
+    - t1
+id: copyright
+theme: t1
+region: footer
+weight: 0
+provider: null
+plugin: 'block_content:39e4c4bf-4da4-4b7b-8c24-bebc51ccffa7'
+settings:
+  id: 'block_content:39e4c4bf-4da4-4b7b-8c24-bebc51ccffa7'
+  label: Copyright
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

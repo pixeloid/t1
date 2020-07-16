@@ -1,0 +1,8 @@
+uuid: 0ef9be83-2fdb-4ee5-8e18-441d798a4552
+langcode: hu
+status: true
+dependencies: {  }
+name: 'Person type'
+vid: person_type
+description: ''
+weight: 0

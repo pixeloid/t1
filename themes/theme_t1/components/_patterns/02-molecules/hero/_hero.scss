@@ -1,0 +1,235 @@
+
+.hero {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+
+  body.adminimal-admin-toolbar &,
+  .layout-builder-block > & {
+    height: 600px;
+    width: 100%;
+  }
+
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait) {
+    height: 1024px;
+  }
+
+  /* iPad with landscape orientation. */
+  @media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape) {
+    height: 768px;
+  }
+
+  &--centered {
+    justify-content: center;
+  }
+
+  @include breakpoint(medium) {
+  }
+
+  &:before {
+    background: linear-gradient(rgba($black, 0) 0%, rgba($black, 0.4) 65%, rgba($black, 0.7) 100%);
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+    z-index: 2;
+  }
+
+  &__content {
+    @include fluid-type(320px, 1600px, 14px, 35px);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 10rem;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    align-items: center;
+    justify-content: flex-end;
+    display: flex;
+    flex-direction: column;
+    z-index: 3;
+    padding: 0 5vw;
+    hr {
+      display: none;
+      background: $white;
+      height: 2px;
+      border: none;
+      margin: 0.7em 0;
+      position: static;
+      width: 100%;
+    }
+
+    @include breakpoint(medium) {
+      align-items: initial;
+      flex-direction: row;
+      justify-content: flex-start;
+      text-align: left;
+      align-items: center;
+      margin-bottom: auto;
+      margin-top: auto;
+      top: 4rem;
+
+    }
+
+  
+
+    &--centered {
+      flex-direction: column;
+      justify-content: center;
+      height: auto;
+      top: auto;
+
+      hr {
+        display: block;
+      }
+
+    }
+
+
+  }
+
+  &__image {
+    position: fixed;
+    height: 100%;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    z-index: 1;
+
+    body.adminimal-admin-toolbar &,
+    .layout-builder-block & {
+      position: static;
+    }
+    > div {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      transform: translateX(-50%);
+      max-width: none;
+      width: 100%;
+      height: 100%;
+      img {
+        height: calc(100vh + 80px);
+        width: auto;
+        max-width: none;
+
+      }
+    }
+      @include breakpoint(medium) {
+      }
+
+  }
+
+  &__icon {
+      height: 4em;
+      margin: 1.2em;
+      width: 4em;
+
+    @include breakpoint(medium) {
+      height: 2em;
+      margin: 1.2em;
+      width: 2em;
+    }
+
+
+    .hero__content--centered & {
+      height: 2em;
+      margin: 1.6em;
+      width: 2em;
+    }
+
+  }
+
+  &.wide > div img {
+    height: auto;
+    width: calc(100vw + 80px);
+  }
+
+}
+.hero__title {
+  align-items: flex-start;
+  line-height: 1.2;
+  font-weight: 300;
+  text-transform: none;
+  margin: 0;
+  padding: 0.5rem 1.5em;
+  position: relative;
+  text-align: center;
+  max-width: 800px;
+
+
+
+  .hero__content--centered &{
+    font-weight: bold;
+    padding: 0;
+    text-transform: uppercase;
+  }
+
+  @include breakpoint(medium) {
+    text-align: left;
+    flex: 1;
+
+    .hero__content--centered & {
+      text-align: center;
+      flex: none;
+    }
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 2px;
+    width: 100%;
+    background: $white;
+    margin-bottom: 1em;
+    
+    @include breakpoint(medium) {
+      position: absolute;
+      height: 140%;
+      left: 0;
+      top: -20%;
+      width: 2px;
+      margin-bottom: 0;
+    }
+  }
+
+  .hero__content--centered & {
+    &::before {
+      display: none;
+    }
+  }
+
+
+
+}
+
+.hero__body {
+  @extend .h1;
+
+  text-transform: none;
+  font-weight: 200;
+   max-width: 700px;
+   text-align: center;
+}
+
+
+.cycle-pager {
+  position: absolute;
+  z-index: 1000;
+}
+
+.cycle-slide {
+  width: 100vw;
+  height: 100vh;
+}

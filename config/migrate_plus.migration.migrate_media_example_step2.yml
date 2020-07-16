@@ -1,0 +1,40 @@
+uuid: c653dc29-73ca-445b-833a-a3bd771dd3ad
+langcode: hu
+status: true
+dependencies:
+  enforced:
+    module:
+      - migrate_media
+_core:
+  default_config_hash: xwVkQoLHsM1U8_QI4vYcwZY-3Va1mMHE2GJRgtTF0AY
+id: migrate_media_example_step2
+class: null
+field_plugin_method: null
+cck_plugin_method: null
+migration_tags: null
+migration_group: media
+label: 'Example Mapping'
+source:
+  plugin: 'content_entity:node'
+  bundle: project
+  include_translations: false
+process:
+  nid: nid
+  type:
+    plugin: default_value
+    default_value: project
+  field_hero_image_media:
+    plugin: file_id_lookup
+    source: field_hero_image
+    migration: migrate_media_example_step1
+    no_stub: true
+  field_cover_image_media:
+    plugin: file_id_lookup
+    source: field_cover_image
+    migration: migrate_media_example_step1
+    no_stub: true
+destination:
+  plugin: 'entity:node'
+migration_dependencies:
+  optional:
+    - migrate_media_example_step1

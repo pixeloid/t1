@@ -1,0 +1,15 @@
+uuid: e0db40ca-d09b-4c6d-9cda-5cc76216cd69
+langcode: hu
+status: true
+dependencies: {  }
+name: landscape_cropped_500
+label: 'Landscape Cropped 500'
+effects:
+  cc6e36ac-89dc-40ff-b4e1-6fe3bd75f2dc:
+    uuid: cc6e36ac-89dc-40ff-b4e1-6fe3bd75f2dc
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 500
+      height: 375
+      anchor: center-center

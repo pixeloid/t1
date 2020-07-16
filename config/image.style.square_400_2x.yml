@@ -1,0 +1,15 @@
+uuid: 2b818f3c-03f5-4c9f-856e-4bf7208602dd
+langcode: hu
+status: true
+dependencies: {  }
+name: square_400_2x
+label: 'Square 400@2x'
+effects:
+  33caa820-9efe-48d1-95f2-6cd0aa561d0c:
+    uuid: 33caa820-9efe-48d1-95f2-6cd0aa561d0c
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 800
+      height: 800
+      anchor: center-center

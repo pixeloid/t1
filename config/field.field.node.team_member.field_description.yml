@@ -1,0 +1,19 @@
+uuid: 78f96b52-8221-4356-85d4-7f0b4c6b9b49
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.team_member
+id: node.team_member.field_description
+field_name: field_description
+entity_type: node
+bundle: team_member
+label: 'Rövid leírás'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

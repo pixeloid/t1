@@ -1,0 +1,21 @@
+uuid: df8a25c4-797a-48ed-89b0-332d184cfcdd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.teszt.field_title
+    - paragraphs.paragraphs_type.teszt
+id: paragraph.teszt.default
+targetEntityType: paragraph
+bundle: teszt
+mode: default
+content:
+  field_title:
+    weight: 0
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+hidden:
+  created: true
+  status: true

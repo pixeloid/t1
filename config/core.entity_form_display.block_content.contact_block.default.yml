@@ -1,0 +1,100 @@
+uuid: 35bcde18-f2ad-4687-bfec-82bf69296a04
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.field.block_content.contact_block.field_address
+    - field.field.block_content.contact_block.field_address_headline
+    - field.field.block_content.contact_block.field_company_info
+    - field.field.block_content.contact_block.field_e_mail
+    - field.field.block_content.contact_block.field_geo
+    - field.field.block_content.contact_block.field_headline
+    - field.field.block_content.contact_block.field_telephone
+    - field.field.block_content.contact_block.field_web
+  module:
+    - address
+    - geofield
+    - link
+    - telephone
+id: block_content.contact_block.default
+targetEntityType: block_content
+bundle: contact_block
+mode: default
+content:
+  field_address:
+    weight: 26
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_address_headline:
+    weight: 33
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_company_info:
+    weight: 31
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textarea
+    region: content
+  field_e_mail:
+    weight: 28
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: email_default
+    region: content
+  field_geo:
+    weight: 27
+    settings:
+      html5_geolocation: false
+    third_party_settings: {  }
+    type: geofield_latlon
+    region: content
+  field_headline:
+    weight: 32
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
+    region: content
+  field_telephone:
+    weight: 30
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: telephone_default
+    region: content
+  field_web:
+    weight: 29
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

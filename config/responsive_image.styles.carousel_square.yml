@@ -1,0 +1,24 @@
+uuid: ec51db26-e866-4775-8ca0-10697e6904bd
+langcode: hu
+status: true
+dependencies:
+  config:
+    - image.style.square_400
+    - image.style.square_400_2x
+  theme:
+    - t1
+id: carousel_square
+label: 'Carousel Square'
+image_style_mappings:
+  -
+    breakpoint_id: t1.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: square_400
+  -
+    breakpoint_id: t1.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: square_400_2x
+breakpoint_group: t1
+fallback_image_style: square_400

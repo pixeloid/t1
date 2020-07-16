@@ -1,0 +1,19 @@
+uuid: f8f1e81b-5a12-47ea-9804-1996e607a990
+langcode: hu
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_web
+field_name: field_web
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

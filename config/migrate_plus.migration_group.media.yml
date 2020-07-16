@@ -1,0 +1,10 @@
+uuid: b21245ed-06dc-4547-bd93-6fc06b7a32f1
+langcode: hu
+status: true
+dependencies: {  }
+id: media
+label: media
+description: ''
+source_type: null
+module: null
+shared_configuration: null

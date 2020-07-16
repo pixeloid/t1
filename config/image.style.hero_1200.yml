@@ -1,0 +1,15 @@
+uuid: 49d9f1e7-a872-445f-b25d-95b74a32db77
+langcode: hu
+status: true
+dependencies: {  }
+name: hero_1200
+label: 'Hero 1200'
+effects:
+  1d1e630b-429e-4cfc-91a8-b72b71ca5530:
+    uuid: 1d1e630b-429e-4cfc-91a8-b72b71ca5530
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1200
+      height: 625
+      anchor: center-center

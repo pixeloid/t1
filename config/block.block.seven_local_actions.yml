@@ -1,0 +1,20 @@
+uuid: eb2aec93-580c-42f1-8438-eeb4d9ca70a1
+langcode: hu
+status: true
+dependencies:
+  theme:
+    - seven
+_core:
+  default_config_hash: HHryZVJbeKi9WnuBGC8FOhBZmBnk2G1H6KxFuy-rC9A
+id: seven_local_actions
+theme: seven
+region: content
+weight: -10
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Elsődleges adminisztrátori műveletek'
+  provider: core
+  label_display: '0'
+visibility: {  }

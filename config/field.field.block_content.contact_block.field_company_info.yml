@@ -1,0 +1,19 @@
+uuid: b4c3b475-0bc7-4343-9328-70481df5fb00
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.storage.block_content.field_company_info
+id: block_content.contact_block.field_company_info
+field_name: field_company_info
+entity_type: block_content
+bundle: contact_block
+label: Céginfo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

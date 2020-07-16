@@ -1,0 +1,35 @@
+uuid: 0b3c15ab-288d-407a-a7b6-277fdd65d0d3
+langcode: hu
+status: true
+dependencies:
+  module:
+    - language
+_core:
+  default_config_hash: AMWw3H7E7fuBLMW6LmsCJvYFYQiWwSCl0Fbwe0wiIrU
+id: language-add
+label: 'Nyelvek hozzáadása'
+module: language
+routes:
+  -
+    route_name: language.add
+tips:
+  language-add-overview:
+    id: language-add-overview
+    plugin: text
+    label: 'Nyelvek hozzáadása'
+    body: '<p>Ez az oldal lehetőséget nyújt, hogy gyakori nyelveket lehessen hozzáadni a webhelyhez.</p><p>Ha a kívánt nyelv nem áll rendelkezésre, akkor felvehető egyéni nyelv.</p>'
+    weight: 1
+  language-add-choose:
+    id: language-add-choose
+    plugin: text
+    label: 'Nyelv kiválasztása'
+    body: '<p>Lehet választani egy nyelvet a listából vagy a lista alján lévő „Egyéni nyelv...”-et.</p><p>A nyelv kiválasztása után a „Nyelv hozzáadása” gombra kell kattintani.</p><p>Egyéni nyelv hozzáadásakor egy további űrlapon lehet megadni a nyelv nevét, kódját és irányát.'
+    weight: 2
+    attributes:
+      data-id: edit-predefined-langcode
+  language-add-continue:
+    id: language-add-continue
+    plugin: text
+    label: Folytatás
+    body: '<p>Most, a „Nyelv hozzáadása” oldal áttekintése után a következőkkel lehet folytatni:<ul><li>Egy nyelv hozzáadása</li><li>Egy egyéni nyelv hozzáadása</li><li><a href="[site:url]/admin/config/regional/language">Beállított nyelvek áttekintése</a></li></ul></p>'
+    weight: 3

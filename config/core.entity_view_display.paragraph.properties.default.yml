@@ -1,0 +1,41 @@
+uuid: 1cc2d389-ab49-40a0-add6-7944a20856c7
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.properties.field_newline
+    - field.field.paragraph.properties.field_property_name
+    - field.field.paragraph.properties.field_property_value
+    - paragraphs.paragraphs_type.properties
+id: paragraph.properties.default
+targetEntityType: paragraph
+bundle: properties
+mode: default
+content:
+  field_newline:
+    weight: 2
+    label: above
+    settings:
+      format: default
+      format_custom_false: ''
+      format_custom_true: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
+  field_property_name:
+    weight: 0
+    label: hidden
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_property_value:
+    weight: 1
+    label: hidden
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden: {  }

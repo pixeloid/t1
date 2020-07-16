@@ -1,0 +1,29 @@
+uuid: 4aa40d44-6fc3-4f9c-a146-57521000fea9
+langcode: hu
+status: true
+dependencies:
+  config:
+    - image.style.landscape_cropped_500
+    - image.style.landscape_cropped_500_2x
+  theme:
+    - t1
+id: inline_landscape_half_
+label: 'Inline Landscape Half '
+image_style_mappings:
+  -
+    breakpoint_id: t1.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: landscape_cropped_500
+  -
+    breakpoint_id: t1.large
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: landscape_cropped_500_2x
+  -
+    breakpoint_id: t1.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: landscape_cropped_500_2x
+breakpoint_group: t1
+fallback_image_style: landscape_cropped_500

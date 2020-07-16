@@ -1,0 +1,15 @@
+uuid: 43a8df5d-a96f-4389-a292-5d88c06ee988
+langcode: hu
+status: true
+dependencies: {  }
+name: landscape_cropped_500_2x
+label: 'Landscape Cropped 500@2x'
+effects:
+  b47f76cf-b7cb-4cb8-91f4-5515dcf3ec95:
+    uuid: b47f76cf-b7cb-4cb8-91f4-5515dcf3ec95
+    id: image_scale_and_crop
+    weight: 1
+    data:
+      width: 1000
+      height: 750
+      anchor: center-center

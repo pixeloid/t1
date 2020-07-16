@@ -1,0 +1,19 @@
+uuid: 912d0c2a-2aec-4ac1-95f5-2ab488cf5587
+langcode: hu
+status: true
+dependencies:
+  module:
+    - block_content
+    - telephone
+id: block_content.field_telephone
+field_name: field_telephone
+entity_type: block_content
+type: telephone
+settings: {  }
+module: telephone
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,13 @@
+uuid: 470a751f-c210-4a2d-8346-e2d1a4611a9d
+langcode: hu
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: lsQkbo4njZ-Q_oGKCPGXGWFjWF1I7QpgA6m-t9rcRoA
+id: node_publish_action
+label: 'Tartalom közzététele'
+type: node
+plugin: 'entity:publish_action:node'
+configuration: {  }

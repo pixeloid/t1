@@ -1,0 +1,28 @@
+{% embed "@templates/_default.twig" with {
+  menu_items: header.menu_items,
+  footer_menu_items: footer.menu_items,
+} %}
+
+  {% block page_content %}
+
+    {% if site_title %}
+      {% include "@atoms/02-text/00-headings/_heading.twig" with {
+        "heading_level": 1,
+        "heading": "Home",
+        "heading_modifiers": ["margin"],
+      } %}
+    {% endif %}
+
+    {% include "@molecules/hero/hero.twig" with {
+      hero_title: "Test Title that is fairly long for a reason Test Title that is fairly long for a reason Test Title that is fairly
+      long for a reason",
+      hero_img_src: "https://placeimg.com/2000/800/nature",
+      hero_link: "/stuff",
+    } %}
+
+    {% include "@organisms/grid-gallery/grid-gallery.twig" with {
+    } %}
+
+  {% endblock %}
+
+{% endembed %}

@@ -1,0 +1,20 @@
+{% set project_data_base_class = 'project-data' %}
+
+<div {{ bem(project_data_base_class, null) }}>
+  <div {{ bem('inner', null, project_data_base_class, null) }}>
+    {% block content %}
+          <p><strong>{{ category }} - {{ year }}</strong></p>
+          <dl>
+            {% for item in properties %}
+            <dt>
+              {{ item.name }}:
+            </dt>
+            <dd>
+              &nbsp;{{ item.value }}
+            </dd>
+            {% endfor %}
+          </dl>
+
+    {% endblock content %}    
+  </div>
+</div>

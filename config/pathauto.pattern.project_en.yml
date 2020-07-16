@@ -1,0 +1,33 @@
+uuid: d5a65e78-48ed-4760-8fe0-ad81aed529c4
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: project_en
+label: 'Project EN'
+type: 'canonical_entities:node'
+pattern: 'works/[node:title]'
+selection_criteria:
+  9567bfd8-6099-479b-9c8e-262172226fab:
+    id: node_type
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 9567bfd8-6099-479b-9c8e-262172226fab
+  a2c5d7ac-cf2c-460e-9900-473bf5ea07d7:
+    id: language
+    langcodes:
+      en: en
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: a2c5d7ac-cf2c-460e-9900-473bf5ea07d7
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

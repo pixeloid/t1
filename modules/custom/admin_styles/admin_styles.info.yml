@@ -1,0 +1,5 @@
+name: admin_styles
+type: module
+description: Styling admin things
+core: 8.x
+package: Administration

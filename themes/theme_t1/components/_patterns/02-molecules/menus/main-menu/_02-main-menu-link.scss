@@ -1,0 +1,88 @@
+// A
+.main-menu__link {
+  color: $black;
+  display: block;
+  @include fluid-type(320px, 1000px, 13px, 15px);
+  line-height: 1.5;
+  padding: 1em 4em;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in;
+  letter-spacing: 2px;
+  margin-right: 2px;
+  &:before {
+    content: "";
+    transition: all 0.2s ease-in;
+    display: block;
+    height: 1em;
+    border-left: 0px solid $red;
+    margin-right: 0.5em;
+      transform: translateX(3px);
+  }
+
+  &:hover {
+      color: $black;
+      font-weight: 700;
+      margin-right: 0;
+    &:before {
+      transform: translateX(0);
+      border-left-width: 3px;
+    }
+  }
+
+  &--with-sub {
+    width: 80%;
+  }
+
+  @include breakpoint($main-menu-medium) {
+
+    &.active,
+    &:active,
+    &:hover {
+      // color: $gray-lighter;
+    }
+
+    // &::after {
+    //   color: $white;
+    //   content: ">";
+    //   display: inline-block;
+    // }
+
+    // &--sub::after {
+    //   display: none;
+    // }
+
+    // &:hover {
+    //   color: $white;
+
+    //   &::after {
+    //     color: $gray-light;
+    //   }
+    // }
+  }
+}
+
+//
+// Sub Navigation Links
+//
+// A (Nested)
+.main-menu__link--sub {
+  color: $gray-dark;
+  font-weight: normal;
+  padding-left: $space-triple;
+
+  @include breakpoint($main-menu-medium) {
+    color: $gray-light;
+    display: block;
+    padding: $space-one-third $space;
+  }
+}
+
+.main-menu--sub-2 {
+  background-color: $gray-lightest;
+}
+
+.main-menu__link--sub-2 {
+  padding-left: $space-quadruple;
+}

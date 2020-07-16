@@ -1,0 +1,72 @@
+uuid: 17bd8509-7675-4545-bd62-b8f7de3a6517
+langcode: hu
+status: true
+dependencies:
+  config:
+    - image.style.hero_1024
+    - image.style.hero_1024_2x
+    - image.style.hero_1200
+    - image.style.hero_1200_x2
+    - image.style.hero_1440
+    - image.style.hero_1440_2
+    - image.style.hero_1920
+    - image.style.hero_1920_2x
+    - image.style.hero_6
+    - image.style.hero_640_2x
+  theme:
+    - t1
+id: hero
+label: Hero
+image_style_mappings:
+  -
+    breakpoint_id: t1.xxlarge
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_1920
+  -
+    breakpoint_id: t1.xxlarge
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_1920_2x
+  -
+    breakpoint_id: t1.xlarge
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_1440
+  -
+    breakpoint_id: t1.xlarge
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_1440_2
+  -
+    breakpoint_id: t1.large
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_1200
+  -
+    breakpoint_id: t1.large
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_1200_x2
+  -
+    breakpoint_id: t1.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_1024
+  -
+    breakpoint_id: t1.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_1024_2x
+  -
+    breakpoint_id: t1.small
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: hero_6
+  -
+    breakpoint_id: t1.small
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: hero_640_2x
+breakpoint_group: t1
+fallback_image_style: hero_1024

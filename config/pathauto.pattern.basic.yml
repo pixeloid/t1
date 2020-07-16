@@ -1,0 +1,33 @@
+uuid: 57e06c3b-d30f-471b-922f-887e74bb3cbb
+langcode: hu
+status: true
+dependencies:
+  module:
+    - language
+    - node
+id: basic
+label: 'Project HU'
+type: 'canonical_entities:node'
+pattern: 'munkak/[node:title]'
+selection_criteria:
+  bb557be6-1ec1-48a1-81ef-d368069c955e:
+    id: node_type
+    bundles:
+      project: project
+    negate: false
+    context_mapping:
+      node: node
+    uuid: bb557be6-1ec1-48a1-81ef-d368069c955e
+  a9b1488f-c4fa-46d3-9c9e-ea60cd185e94:
+    id: language
+    langcodes:
+      hu: hu
+    negate: false
+    context_mapping:
+      language: 'node:langcode:language'
+    uuid: a9b1488f-c4fa-46d3-9c9e-ea60cd185e94
+selection_logic: and
+weight: -10
+relationships:
+  'node:langcode:language':
+    label: Language

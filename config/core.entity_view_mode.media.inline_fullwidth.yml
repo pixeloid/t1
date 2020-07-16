@@ -1,0 +1,10 @@
+uuid: 4a09fe77-08e0-4bfa-9345-8e28bba0cd07
+langcode: hu
+status: true
+dependencies:
+  module:
+    - media
+id: media.inline_fullwidth
+label: 'Inline fullwidth'
+targetEntityType: media
+cache: true

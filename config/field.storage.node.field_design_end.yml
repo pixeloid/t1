@@ -1,0 +1,20 @@
+uuid: 12324c36-b3cc-45d5-8455-fb03fa65dfcf
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_design_end
+field_name: field_design_end
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

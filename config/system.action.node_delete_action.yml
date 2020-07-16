@@ -1,0 +1,13 @@
+uuid: f5148efb-f393-4777-9a6e-dd21a96691e8
+langcode: hu
+status: true
+dependencies:
+  module:
+    - node
+_core:
+  default_config_hash: Zx0jD1Klh5tZaGJy8uOeR_2MCu9FDM4xg7TaUJUEbkI
+id: node_delete_action
+label: 'Tartalom törlése'
+type: node
+plugin: 'entity:delete_action:node'
+configuration: {  }

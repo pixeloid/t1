@@ -1,0 +1,11 @@
+uuid: 55ac5b11-50b8-4405-8079-b50ed9130777
+langcode: hu
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.organization_type
+id: taxonomy_term.organization_type
+target_entity_type_id: taxonomy_term
+target_bundle: organization_type
+default_langcode: site_default
+language_alterable: false

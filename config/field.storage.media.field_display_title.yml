@@ -1,0 +1,18 @@
+uuid: 217b2bbe-e362-4ef7-9489-4c4eda6c911f
+langcode: hu
+status: true
+dependencies:
+  module:
+    - media
+id: media.field_display_title
+field_name: field_display_title
+entity_type: media
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,13 @@
+uuid: 2a6e637d-72d9-4be4-9203-f0039bf49075
+langcode: hu
+status: true
+dependencies:
+  module:
+    - media
+_core:
+  default_config_hash: CsK6TseQ2DatEbZgbd30swOlZ28_HHwAESU2LvEnWq0
+id: media_unpublish_action
+label: 'Média elrejtése'
+type: media
+plugin: 'entity:unpublish_action:media'
+configuration: {  }

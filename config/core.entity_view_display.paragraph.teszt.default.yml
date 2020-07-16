@@ -1,0 +1,22 @@
+uuid: 94652eef-a730-4096-86ad-0790b0d44143
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.teszt.field_title
+    - paragraphs.paragraphs_type.teszt
+  module:
+    - options
+id: paragraph.teszt.default
+targetEntityType: paragraph
+bundle: teszt
+mode: default
+content:
+  field_title:
+    weight: 0
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden: {  }

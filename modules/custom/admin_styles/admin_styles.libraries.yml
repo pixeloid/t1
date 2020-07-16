@@ -1,0 +1,6 @@
+admin_styles:
+   version: VERSION
+   css:
+     theme:
+       css/admin_styles.css: {}
+

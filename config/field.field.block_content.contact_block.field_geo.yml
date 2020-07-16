@@ -1,0 +1,22 @@
+uuid: 9cadccd3-eb6c-423f-ba73-0ab04320a6a0
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_block
+    - field.storage.block_content.field_geo
+  module:
+    - geofield
+id: block_content.contact_block.field_geo
+field_name: field_geo
+entity_type: block_content
+bundle: contact_block
+label: Geo
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  backend: geofield_backend_default
+field_type: geofield

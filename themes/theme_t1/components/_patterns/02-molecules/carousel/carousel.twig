@@ -1,0 +1,37 @@
+{% set carousel_base_class = 'carousel-gallery' %}
+{{ attach_library('t1/carousel') }}
+<div {{ bem(carousel_base_class) }} >
+  <!-- Slider main container -->
+  <div class="swiper-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <!-- Slides -->
+      {% for item in items %}
+        <div class="swiper-slide">
+        {{ item.content|raw }}
+        </div>
+      {% endfor %}
+    </div>
+
+    <!-- If we need navigation buttons -->
+    <div class="carousel-gallery__footer">
+      <div class="carousel-gallery__nav">
+        <div class="carousel-gallery__button carousel-gallery__button--prev">
+              {% include "@atoms/04-images/icons/_icon.twig" with {
+      icon_name: 'gray-angle-left',
+    } %}
+{% trans %}Prev{% endtrans %}
+        </div>
+        <div class="carousel-gallery__button carousel-gallery__button--next">
+          {% trans %}Next{% endtrans %}
+              {% include "@atoms/04-images/icons/_icon.twig" with {
+      icon_name: 'gray-angle-right',
+    } %}
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

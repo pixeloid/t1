@@ -1,0 +1,17 @@
+uuid: e698cd5d-5853-4bd0-8f3c-7d0db9597e51
+langcode: hu
+status: true
+dependencies:
+  module:
+    - menu_ui
+third_party_settings:
+  menu_ui:
+    available_menus: {  }
+    parent: ''
+name: Organization
+type: partner
+description: ''
+help: ''
+new_revision: true
+preview_mode: 1
+display_submitted: false

@@ -1,0 +1,24 @@
+uuid: c237c878-1153-42e0-909a-ea6b1b4c2d0e
+langcode: hu
+status: true
+dependencies:
+  config:
+    - image.style.inline_900
+    - image.style.inline_900_2x
+  theme:
+    - t1
+id: inline_image
+label: 'Inline image'
+image_style_mappings:
+  -
+    breakpoint_id: t1.medium
+    multiplier: 1x
+    image_mapping_type: image_style
+    image_mapping: inline_900
+  -
+    breakpoint_id: t1.medium
+    multiplier: 2x
+    image_mapping_type: image_style
+    image_mapping: inline_900_2x
+breakpoint_group: t1
+fallback_image_style: inline_900

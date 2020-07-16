@@ -1,0 +1,10 @@
+uuid: 5c681a85-7886-49cf-99b0-879a0b3cb1bd
+langcode: hu
+status: true
+dependencies:
+  module:
+    - media
+id: media.inline_1_2
+label: 'Inline 1/2'
+targetEntityType: media
+cache: true

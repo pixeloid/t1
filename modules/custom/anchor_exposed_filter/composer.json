@@ -1,0 +1,14 @@
+{
+  "name": "drupal/anchor_exposed_filter",
+  "type": "drupal-module",
+  "description": "Exposed filter using anchors",
+  "keywords": ["Drupal"],
+  "license": "GPL-2.0+",
+  "homepage": "https://www.drupal.org/project/anchor_exposed_filter",
+  "minimum-stability": "dev",
+  "support": {
+    "issues": "http://drupal.org/project/issues/anchor_exposed_filter",
+    "source": "http://cgit.drupalcode.org/anchor_exposed_filter"
+  },
+  "require": { }
+}

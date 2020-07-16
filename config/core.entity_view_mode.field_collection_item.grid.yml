@@ -1,0 +1,10 @@
+uuid: 82f4d0d1-0a8d-4099-ae47-887fc16ebb3a
+langcode: en
+status: true
+dependencies:
+  module:
+    - field_collection
+id: field_collection_item.grid
+label: Grid
+targetEntityType: field_collection_item
+cache: true

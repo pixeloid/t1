@@ -1,0 +1,22 @@
+uuid: b1ae9c41-b29a-42df-9d39-dc7042a766a2
+langcode: hu
+status: true
+dependencies:
+  module:
+    - node
+id: member
+label: Member
+type: 'canonical_entities:node'
+pattern: 'team/[current-page:title]'
+selection_criteria:
+  92f372a9-e303-416b-ac16-46aa2d11a5ba:
+    id: node_type
+    bundles:
+      team_member: team_member
+    negate: false
+    context_mapping:
+      node: node
+    uuid: 92f372a9-e303-416b-ac16-46aa2d11a5ba
+selection_logic: and
+weight: -5
+relationships: {  }

@@ -1,0 +1,37 @@
+<?php
+
+/**
+ * @file
+ * Contains project_view_mode.module..
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function project_view_mode_help($route_name, RouteMatchInterface $route_match)
+{
+    switch ($route_name) {
+    // Main module help for the project_view_mode module.
+    case 'help.page.project_view_mode':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Project View mode') . '</p>';
+      return $output;
+
+    default:
+  }
+}
+
+
+function project_view_mode_entity_view_mode_alter(&$view_mode, Drupal\Core\Entity\EntityInterface $entity)
+{
+    // $view_mode = 'teaser';
+
+    // if (isset($entity->field_display_type)) {
+    //     if ($entity->field_display_type->value == 'square') {
+    //         $view_mode = 'grid';
+    //     }
+    // }
+}

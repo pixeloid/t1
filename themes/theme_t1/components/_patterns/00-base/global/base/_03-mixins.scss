@@ -1,0 +1,149 @@
+/////////////////////
+// General Mixins (put specific ones in component files where applicable)
+
+/// Mixin - Clearfix.
+/// Adds clearfix based on http://bourbon.io/docs/#clearfix
+/// use example =   @include cleafix
+
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+/// Mixin - Wrapper
+/// Outer container mixin for large screens
+@mixin wrapper($container-max-width: $max-width, $outer-container-break: $small, $v-margin: 0, $v-padding: 0, $h-padding: $space, $h-padding-large: $h-padding) {
+  margin: #{$v-margin} auto;
+  max-width: #{$container-max-width};
+  padding: #{$v-padding} #{$h-padding};
+  width: 100%;
+
+  @include breakpoint($outer-container-break) {
+    padding: #{$v-padding} #{$h-padding-large};
+  }
+
+  @include breakpoint($container-max-width) {
+    padding-left: calc(#{$h-padding-large} + calc(-50vw + calc(#{$container-max-width} / 2)));
+    padding-right: calc(#{$h-padding-large} + calc(-50vw + calc(#{$container-max-width} / 2)));
+  }
+}
+
+/// Use the breakout mixin for elements that should be edge-to-edge
+/// Even when a parent container uses the wrapper mixin
+@mixin breakout($v-padding: $space-double) {
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding-left: calc(#{$v-padding} + calc(-50vw + 50%));
+  padding-right: calc(#{$v-padding} + calc(-50vw + 50%));
+}
+
+/// Mixin - Standard Margin
+@mixin margin {
+  margin-bottom: 1em;
+}
+
+@mixin no-bottom {
+  margin-bottom: 0;
+}
+
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin fluid-type($min-vw, $max-vw, $min-font-size, $max-font-size) {
+  $u1: unit($min-vw);
+  $u2: unit($max-vw);
+  $u3: unit($min-font-size);
+  $u4: unit($max-font-size);
+
+  @if $u1==$u2 and $u1==$u3 and $u1==$u4 {
+    & {
+      font-size: $min-font-size;
+
+      @media screen and (min-width: $min-vw) {
+        font-size: calc(#{$min-font-size} + #{strip-unit($max-font-size - $min-font-size)} * ((100vw - #{$min-vw}) / #{strip-unit($max-vw - $min-vw)}));
+      }
+
+      @media screen and (min-width: $max-vw) {
+        font-size: $max-font-size;
+      }
+    }
+  }
+}
+
+
+@mixin frame-line($base-spacing, $linespeed) {
+
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    transition: transform linear $linespeed;
+    z-index: 1;
+  }
+
+  &.bl {
+    &:after {
+      border-bottom: 2px solid #fff;
+      bottom: $base-spacing;
+      left: $base-spacing;
+      right: $base-spacing;
+      top: $base-spacing;
+      transform: scale(0, 1);
+      transform-origin: 100% 100%;
+
+    }
+
+    &:before {
+      border-left: 2px solid #fff;
+      bottom: $base-spacing;
+      left: $base-spacing;
+      right: $base-spacing;
+      top: 0;
+      transform: scale(1, 0);
+      transform-origin: 0 100%;
+
+    }
+
+  }
+
+  &.tr {
+    &:after {
+      border-right: 2px solid #fff;
+      bottom: $base-spacing;
+      left: 0;
+      right: $base-spacing;
+      top: $base-spacing;
+      transform: scale(1, 0);
+      transform-origin: 0 0;
+
+    }
+
+    &:before {
+      border-top: 2px solid #fff;
+      bottom: $base-spacing;
+      left: 0;
+      right: $base-spacing;
+      top: $base-spacing;
+      transform: scale(0, 0);
+      transform-origin: 0 0;
+
+    }
+
+  }
+}
+
+
+$min_width: 320px;
+$max_width: 1000px;
+$min_font: 16px;
+$max_font: 22px;

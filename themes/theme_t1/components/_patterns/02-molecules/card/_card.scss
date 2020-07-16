@@ -1,0 +1,403 @@
+$linespeed: 0.11s;
+$base-spacing: 2rem;
+$base-padding: $base-spacing * 1;
+%gradient {
+    background : linear-gradient(45deg, rgba(65, 64, 66, 1) 12.71%, rgba(72, 62, 64, 1) 37.29%, rgba(90, 56, 57, 1) 71.91%, rgba(110, 50, 50, 1) 100%);
+
+}
+%fontsize {
+        font-size: 6vw;
+
+        @include breakpoint(medium) {
+          font-size: 3vw;
+        }
+
+        @include breakpoint(large) {
+          font-size: 2vw;
+        }
+
+        @include breakpoint(xlarge) {
+          font-size: 1.5vw;
+        }
+        @include breakpoint(xxlarge) {
+          font-size: 1.2vw;
+        }
+        @include breakpoint(xxxlarge) {
+          font-size: 1vw;
+        }
+}
+
+.card {
+  $root: &;
+  border: 0;;
+  cursor: pointer;
+  display: block;
+  margin: 0;
+  // width: 33.33%;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  filter: saturate(0.5);
+  transition: all 0.35s;
+    // transition-delay: 0.8s;
+
+  &--gradient {
+    @extend %gradient;
+
+    img {
+      transition: all 0.5s ease;
+    }
+
+    .card__copy::before {
+      backdrop-filter: none;
+    }
+  }
+
+  &__copy {
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    height: calc(100% - #{$base-spacing * 2});
+    justify-content:  center;
+
+    left: $base-spacing;
+    padding: $base-padding;
+    position: absolute;
+    top: $base-spacing;
+    width: calc(100% - #{$base-spacing * 2});
+    &:before,
+    &:after {
+      pointer-events: none;
+    }
+
+    &:before {
+      background: rgba(0,0,0,0.5);
+      content: "";
+      display: block;
+      height: 100%;
+      left: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      transition: all 0.2s ease;
+      width: 100%;
+
+      @supports (backdrop-filter: blur()) {
+        backdrop-filter: blur(0);
+        background: rgba(0,0,0,.1);
+      }
+
+    }
+
+  }
+
+  &__copy-inner {
+    position: relative;
+  }
+
+  &__copy-inner:before {
+    background: $white;
+    content: '';
+    height: 0;
+    left: -$base-spacing;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.2s ease-out;
+    transition-delay: 0.1s;
+    width: 6px;
+    z-index: 2;
+
+  }
+
+  &__link {
+    bottom: -$base-spacing;
+    display: block;
+    left: -$base-spacing;
+    position: absolute;
+    right: -$base-spacing;
+    text-indent: -100000px;
+    top: -$base-spacing;
+    z-index: 1000;
+  }
+
+  img, picture{
+    max-width: none;
+    width: 100%;
+  }
+
+  &__line {
+    @include frame-line($base-spacing, $linespeed);
+  }
+
+
+  &__caption {
+    @extend .h6;
+    clear: left;
+    color: $white;
+    display: block;
+    float: left;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0;
+    padding-top: 0;
+    position: relative;
+    transform: translate3d(-10px, 0, 0);
+    transition: all 0.2s ease-out;
+    transition-delay: 0.1s;
+
+ 
+
+    &--title {
+      font-weight: 800;
+      text-transform: uppercase;
+      border: none !important;
+      padding-left: 0 !important;
+      @extend %fontsize;
+    }
+
+    &--body {
+      font-weight: 300;
+      text-transform: none;
+      line-height: 1.2;
+      @extend %fontsize;
+    }
+
+    @include breakpoint(medium) {
+
+    }
+
+    @include breakpoint(large) {
+
+    }
+
+    &__button {
+      background: $red;
+      bottom: $base-padding;
+      color: #fff;
+      display: none;
+      font-weight: 600;
+      left: $base-padding;
+      margin: 0;
+      padding: 0.8em 0.8em;
+      position: absolute;
+      transform: translate3d(0, -2*$base-spacing, 0);
+
+      z-index: 10000;
+
+      @include breakpoint(large) {
+        display: block;
+      }
+
+
+    }
+
+    &__caption{
+    }
+
+    &__category {
+      display: none;
+
+      @include breakpoint(medium) {}
+
+      @include breakpoint(large) {
+        display: block;
+
+      }
+    }
+
+  }
+
+
+  &--onlytext,
+  &--logo {
+    &:before {
+      transition: all 0.2s ease-out;
+      position: absolute;
+      display: block;
+      z-index: 0;
+      content: '';
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background : linear-gradient(45deg, rgba(147, 149, 152, 1) 12.71%, rgba(154, 156, 158, 1) 38.84%, rgba(172, 174, 176, 1) 75.66%, rgba(188, 190, 192, 1) 100%);
+      z-index: -1;
+    }
+
+    img {
+      margin: 20%;
+      width: 60%;
+    }
+  }
+
+
+}
+
+.card__caption--title + .card__caption--body {
+    &:before {
+      content: '-';
+      display: block;
+    }
+}
+
+.card--gradient {
+
+  &:hover,
+  &.in-wp,
+  .node--type-project.loaded & {
+    .card__copy::before {}
+
+    img {
+      opacity: 0;
+    }
+  }
+}
+.card--logo,
+.card--onlytext {
+
+  &:hover,
+  &.in-wp,
+  .node--type-project.loaded & {
+    &::before {
+      opacity: 0;
+    }
+
+  }
+
+  .card__copy:before {
+      background: none;
+      @supports (backdrop-filter: blur()) {
+        backdrop-filter: none;
+        background: none;
+      }
+  }
+}
+.card:hover:not(.card--nohover),
+.card.in-viewport,
+.card--onlytext,
+.node--type-project.loaded .card {
+  filter: saturate(1);
+
+  .card__copy::before {
+    transition: all 0.5s;
+    opacity: 1;
+    @supports (backdrop-filter: blur()) {
+      backdrop-filter: blur(8px);
+    }
+
+  }
+
+  .card__caption {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition-delay: 0.05s;
+
+    &__button {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+      transition-delay: $linespeed * 2;
+    }
+  }
+
+  .card__copy-inner:before {
+    height: 100%;
+    opacity: 1;
+    transition-delay: 0.2s;
+  }
+
+}
+
+.card:hover:not(.card--nohover),
+.card.in-viewport,
+.node--type-project.loaded .card {
+
+	.card__line {
+	  &.tr {
+	    &:before {
+	      transform: scale(1);
+	      transition-delay: 0;
+
+	    }
+
+	    &:after {
+	      transform: scale(1);
+	      transition-delay: $linespeed;
+	    }
+	  }
+
+	  &.bl {
+	    &:before {
+	      transform: scale(1);
+	      transition-delay: $linespeed*3;
+	    }
+
+	    &:after {
+	      transform: scale(1);
+	      transition-delay: $linespeed*2;
+	    }
+	  }
+	}
+}
+
+
+.card.in-wiewport {
+  .card__caption {
+    transition-delay: 1.25s;
+
+    &__button {
+      transition-delay: ($linespeed * 2) + 1;
+    }
+  }
+
+  .card__line {
+    &.tr {
+      &:before {
+        transition-delay: 1s;
+
+      }
+
+      &:after {
+        transition-delay: $linespeed + 1;
+      }
+    }
+
+    &.bl {
+      &:before {
+        transition-delay: ($linespeed*3) + 1;
+      }
+
+      &:after {
+        transition-delay: ($linespeed*2) + 1;
+      }
+    }
+  }
+
+}
+
+
+
+.card--nohover {
+  filter: saturate(1);
+  .card__line {
+
+    &::before,
+    &:after {
+      transform: scale(1) !important;
+    }
+  }
+}
+
+
+.card--onlytext {
+  .image {
+    opacity: 0;
+  }
+
+  &::before {
+    padding-bottom: 100%;
+    height: auto;
+    position: static;
+  }
+}

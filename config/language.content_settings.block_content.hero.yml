@@ -1,0 +1,16 @@
+uuid: 355b65c3-e7f7-4115-900e-1ddd5c3683e5
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.hero
+target_entity_type_id: block_content
+target_bundle: hero
+default_langcode: site_default
+language_alterable: false

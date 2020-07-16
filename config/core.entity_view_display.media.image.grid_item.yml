@@ -1,0 +1,38 @@
+uuid: 2901d270-efdb-4281-a3fa-abb9cceb76c1
+langcode: hu
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.media.grid_item
+    - field.field.media.image.field_credit
+    - field.field.media.image.field_display_title
+    - field.field.media.image.field_media_image
+    - image.style.square_400
+    - media.type.image
+  module:
+    - image
+    - image_lazy_loader
+id: media.image.grid_item
+targetEntityType: media
+bundle: image
+mode: grid_item
+content:
+  field_media_image:
+    type: image
+    weight: 0
+    region: content
+    label: hidden
+    settings:
+      image_style: square_400
+      image_link: ''
+    third_party_settings:
+      image_lazy_loader:
+        lazy_load_responsive_image: '1'
+hidden:
+  created: true
+  field_credit: true
+  field_display_title: true
+  langcode: true
+  name: true
+  thumbnail: true
+  uid: true

@@ -1,0 +1,48 @@
+global:
+  css:
+    theme:
+      dist/style.css: {}
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/js/foundation.min.js: {type: external}
+    https://cdnjs.cloudflare.com/ajax/libs/Swiper/5.4.5/js/swiper.js: {type: external}
+    https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.js: {type: external}
+    components/js/cycle.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+
+site-header:
+  js:
+    dist/03-organisms/site/site-header/site-header.js: {}
+  dependencies:
+    - core/drupal
+carousel:
+  js:
+    dist/02-molecules/carousel/carousel.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupal
+
+sprite:
+  js:
+    components/js/svgxuse.min.js: { attributes: { defer: true } }
+
+grid-gallery:
+  js:
+    dist/03-organisms/grid-gallery/grid-gallery.js: { attributes: { defer: true } }
+
+accordion:
+  js:
+    dist/02-molecules/accordion-item/accordion-item.js: {}
+
+hero:
+  js:
+    dist/02-molecules/hero/hero.js: {}
+
+countdown:
+  js:
+    dist/02-molecules/countdown/countdown.js: {}
+
+tabs:
+  js:
+    dist/02-molecules/menus/tabs/tabs.js: {}

@@ -1,0 +1,33 @@
+items:
+  1:
+    name: "Bars"
+    value: "bars"
+  2:
+    name: "White logo"
+    value: "logo-white"
+  3:
+    name: "Full logo"
+    value: "logo-full"
+  4:
+    name: "Facebook"
+    value: "facebook"
+    decorative: "true"
+  5:
+    name: "Instagram"
+    value: "instagram"
+    decorative: "true"
+  6:
+    name: "Red angle left"
+    value: "red-angle-left"
+  7:
+    name: "Red angle right"
+    value: "red-angle-right"
+  8:
+    name: "gray angle left"
+    value: "gray-angle-left"
+  9:
+    name: "gray angle right"
+    value: "gray-angle-right"
+  10:
+    name: "red angle down"
+    value: "red-angle-down"

@@ -1,0 +1,10 @@
+uuid: fe0677c9-c1fb-4d6d-a867-91e7b831d1a3
+langcode: hu
+status: true
+dependencies: {  }
+id: properties
+label: Tulajdonságok
+icon_uuid: null
+icon_default: null
+description: ''
+behavior_plugins: {  }

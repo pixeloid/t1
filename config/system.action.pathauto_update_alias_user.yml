@@ -1,0 +1,13 @@
+uuid: 3d8aff40-b58c-4557-9284-8d52536843b5
+langcode: hu
+status: true
+dependencies:
+  module:
+    - pathauto
+_core:
+  default_config_hash: fWszFHPeJ_dhZ8kJEEWo4w-FQH_etR4AxTQkQCW9OLk
+id: pathauto_update_alias_user
+label: 'Webcímálnév frissítése'
+type: user
+plugin: pathauto_update_alias
+configuration: {  }

@@ -1,0 +1,19 @@
+uuid: 36da7d94-3a02-4cd3-8f7a-38dc66e6aa52
+langcode: hu
+status: true
+dependencies:
+  module:
+    - address
+    - block_content
+id: block_content.field_address
+field_name: field_address
+entity_type: block_content
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

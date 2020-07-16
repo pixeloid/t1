@@ -1,0 +1,26 @@
+uuid: 543e86bb-254b-43e0-af1f-177b5136c224
+langcode: hu
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.404.body
+    - node.type.404
+  module:
+    - text
+    - user
+id: node.404.teaser
+targetEntityType: node
+bundle: '404'
+mode: teaser
+content:
+  body:
+    label: hidden
+    type: text_summary_or_trimmed
+    weight: 1
+    settings:
+      trim_length: 600
+    third_party_settings: {  }
+    region: content
+hidden:
+  langcode: true

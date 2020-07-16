@@ -1,0 +1,23 @@
+uuid: 81ca0d2e-acae-4042-8aa0-8efad529d86a
+langcode: hu
+status: true
+dependencies:
+  config:
+    - block_content.type.hero
+    - field.storage.block_content.field_bottom_text
+id: block_content.hero.field_bottom_text
+field_name: field_bottom_text
+entity_type: block_content
+bundle: hero
+label: 'Bottom text'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

@@ -1,0 +1,18 @@
+uuid: 33f2ee70-29d4-4937-b41d-924ca9f683b5
+langcode: hu
+status: true
+dependencies:
+  module:
+    - block_content
+id: block_content.field_bottom_text
+field_name: field_bottom_text
+entity_type: block_content
+type: boolean
+settings: {  }
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
