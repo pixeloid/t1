@@ -7,7 +7,7 @@
   },
   "scripts": {
     "start": "gulp compile && gulp theme",
-    "postinstall": "./scripts/pattern_lab.sh && ./scripts/twig_functions.sh",
+    "php_dep": "./scripts/pattern_lab.sh && ./scripts/twig_functions.sh",
     "new": "yo ./scripts/new-component/index.js",
     "lint": "sass-lint -v",
     "lint:fix": "sass-lint-auto-fix"
