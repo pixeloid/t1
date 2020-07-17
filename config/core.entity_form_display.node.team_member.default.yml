@@ -6,8 +6,12 @@ dependencies:
     - field.field.node.team_member.body
     - field.field.node.team_member.field_cover_image_media
     - field.field.node.team_member.field_description
+    - field.field.node.team_member.field_type
+    - field.field.node.team_member.field_web
     - node.type.team_member
   module:
+    - link
+    - media_library
     - path
     - text
 id: node.team_member.default
@@ -34,12 +38,9 @@ content:
   field_cover_image_media:
     weight: 122
     settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
+      media_types: {  }
     third_party_settings: {  }
-    type: entity_reference_autocomplete
+    type: media_library_widget
     region: content
   field_description:
     weight: 123
@@ -48,6 +49,24 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: string_textarea
+    region: content
+  field_type:
+    weight: 124
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_web:
+    weight: 125
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
     region: content
   langcode:
     type: language_select
@@ -93,9 +112,9 @@ content:
     region: content
   translation:
     weight: 10
+    region: content
     settings: {  }
     third_party_settings: {  }
-    region: content
   uid:
     type: entity_reference_autocomplete
     weight: 5

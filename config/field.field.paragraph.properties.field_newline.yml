@@ -1,0 +1,23 @@
+uuid: 771245ea-77cc-4bd1-b0c1-4039f3207f99
+langcode: hu
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_newline
+    - paragraphs.paragraphs_type.properties
+id: paragraph.properties.field_newline
+field_name: field_newline
+entity_type: paragraph
+bundle: properties
+label: 'Új sor'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: '1'
+  off_label: '0'
+field_type: boolean

@@ -1,17 +1,16 @@
-uuid: 2fdd9435-5d4e-4971-a95a-137f624fc833
-langcode: en
+uuid: cd14dcd8-6882-44b6-b1aa-08d7e2fb4f0b
+langcode: hu
 status: true
 dependencies:
   module:
     - node
-id: node.field_interiour_design
-field_name: field_interiour_design
+    - taxonomy
+id: node.field_type
+field_name: field_type
 entity_type: node
-type: string
+type: entity_reference
 settings:
-  max_length: 255
-  is_ascii: false
-  case_sensitive: false
+  target_type: taxonomy_term
 module: core
 locked: false
 cardinality: 1

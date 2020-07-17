@@ -4,26 +4,17 @@ status: true
 dependencies:
   config:
     - field.field.node.project.body
-    - field.field.node.project.field_architecture
     - field.field.node.project.field_category
-    - field.field.node.project.field_contributors
-    - field.field.node.project.field_cover_image
     - field.field.node.project.field_cover_image_media
     - field.field.node.project.field_design_end
-    - field.field.node.project.field_design_start
+    - field.field.node.project.field_function
     - field.field.node.project.field_gallery
-    - field.field.node.project.field_hero_image
     - field.field.node.project.field_hero_image_media
-    - field.field.node.project.field_interiour_design
-    - field.field.node.project.field_location
     - field.field.node.project.field_meta_description
     - field.field.node.project.field_meta_keywords
     - field.field.node.project.field_meta_title
-    - field.field.node.project.field_process_end
-    - field.field.node.project.field_process_start
     - field.field.node.project.field_project_properties
     - field.field.node.project.field_subtitle
-    - field.field.node.project.field_szures_kategoria
     - field.field.node.project.field_weight
     - node.type.project
   module:
@@ -70,6 +61,7 @@ third_party_settings:
         - field_subtitle
         - field_project_properties
         - field_design_end
+        - field_function
         - field_category
         - body
       parent_name: group_project
@@ -100,8 +92,7 @@ third_party_settings:
         required_fields: true
       region: content
     group_tags:
-      children:
-        - field_szures_kategoria
+      children: {  }
       parent_name: ''
       weight: 22
       label: Tags
@@ -134,7 +125,7 @@ bundle: project
 mode: default
 content:
   body:
-    weight: 14
+    weight: 15
     settings:
       rows: 9
       placeholder: ''
@@ -150,14 +141,14 @@ content:
     third_party_settings: {  }
     region: content
   field_category:
-    weight: 13
+    weight: 14
     settings:
       match_operator: CONTAINS
       match_limit: 10
       size: 60
       placeholder: ''
     third_party_settings: {  }
-    type: entity_reference_autocomplete_tags
+    type: entity_reference_autocomplete
     region: content
   field_cover_image_media:
     type: media_library_widget
@@ -172,6 +163,16 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: number
+    region: content
+  field_function:
+    weight: 13
+    settings:
+      match_operator: CONTAINS
+      match_limit: 10
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
     region: content
   field_gallery:
     type: media_library_widget
@@ -258,16 +259,6 @@ content:
     settings: {  }
     third_party_settings: {  }
 hidden:
-  field_architecture: true
-  field_contributors: true
-  field_cover_image: true
-  field_design_start: true
-  field_hero_image: true
-  field_interiour_design: true
-  field_location: true
-  field_process_end: true
-  field_process_start: true
-  field_szures_kategoria: true
   field_weight: true
   langcode: true
   promote: true

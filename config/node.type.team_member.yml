@@ -9,10 +9,10 @@ third_party_settings:
     available_menus:
       - main
     parent: 'main:'
-name: 'Team member'
+name: Person
 type: team_member
 description: ''
 help: ''
-new_revision: false
+new_revision: true
 preview_mode: 1
 display_submitted: false
