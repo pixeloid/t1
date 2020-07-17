@@ -1,0 +1,20 @@
+uuid: d0923d4c-83b3-47fe-8c75-89f44d0c43cc
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.field_process_start
+field_name: field_process_start
+entity_type: node
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

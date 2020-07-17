@@ -1,0 +1,22 @@
+uuid: c08b1c96-a2f1-4c1c-935f-7eb17b9ac517
+langcode: hu
+status: false
+dependencies:
+  theme:
+    - monoset
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: monoset_local_tasks
+theme: monoset
+region: content
+weight: -3
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Fülek
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

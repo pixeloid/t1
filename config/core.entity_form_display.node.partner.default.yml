@@ -6,11 +6,8 @@ dependencies:
     - field.field.node.partner.field_cover_image_media
     - field.field.node.partner.field_description
     - field.field.node.partner.field_logo
-    - field.field.node.partner.field_type
-    - field.field.node.partner.field_web
     - node.type.partner
   module:
-    - link
     - media_library
     - path
 id: node.partner.default
@@ -48,24 +45,6 @@ content:
     settings:
       media_types: {  }
     third_party_settings: {  }
-    region: content
-  field_type:
-    weight: 124
-    settings:
-      match_operator: CONTAINS
-      match_limit: 10
-      size: 60
-      placeholder: ''
-    third_party_settings: {  }
-    type: entity_reference_autocomplete
-    region: content
-  field_web:
-    weight: 125
-    settings:
-      placeholder_url: ''
-      placeholder_title: ''
-    third_party_settings: {  }
-    type: link_default
     region: content
   langcode:
     type: language_select

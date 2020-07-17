@@ -1,0 +1,20 @@
+uuid: 42ee95f0-e7dc-4184-ac1c-951d324f2390
+langcode: hu
+status: false
+dependencies:
+  theme:
+    - monoset
+_core:
+  default_config_hash: 13GQpeITIJsp1kyPniXtWZfyFH87vb1xxJCHifL4UeE
+id: monoset_local_actions
+theme: monoset
+region: content
+weight: -6
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Elsődleges adminisztrátori műveletek'
+  provider: core
+  label_display: '0'
+visibility: {  }

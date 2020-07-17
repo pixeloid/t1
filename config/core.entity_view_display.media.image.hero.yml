@@ -7,27 +7,27 @@ dependencies:
     - field.field.media.image.field_credit
     - field.field.media.image.field_display_title
     - field.field.media.image.field_media_image
-    - image.style.hero_1920
     - media.type.image
+    - responsive_image.styles.hero
   module:
-    - image
-    - image_lazy_loader
+    - lazy
+    - responsive_image
 id: media.image.hero
 targetEntityType: media
 bundle: image
 mode: hero
 content:
   field_media_image:
-    type: image
+    type: responsive_image
     weight: 0
     region: content
     label: hidden
     settings:
-      image_style: hero_1920
+      responsive_image_style: hero
       image_link: ''
     third_party_settings:
-      image_lazy_loader:
-        lazy_load_responsive_image: '1'
+      lazy:
+        lazy_image: '1'
 hidden:
   created: true
   field_credit: true

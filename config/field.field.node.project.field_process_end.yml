@@ -1,0 +1,23 @@
+uuid: 1421db40-c2d9-4d9e-ba09-64af06d5e845
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_process_end
+    - node.type.project
+id: node.project.field_process_end
+field_name: field_process_end
+entity_type: node
+bundle: project
+label: 'Kivitelezés befejeztének éve'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 1990
+  max: 2020
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,22 @@
+uuid: 082e22c2-509e-4ac9-97aa-f77feb292520
+langcode: hu
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - monoset
+_core:
+  default_config_hash: 9EoWV2Lot6FVSr50t4hoKgiz1LIXYWNG-IIPYsWxBqo
+id: monoset_content
+theme: monoset
+region: content
+weight: -8
+provider: null
+plugin: system_main_block
+settings:
+  id: system_main_block
+  label: Works
+  provider: system
+  label_display: '0'
+visibility: {  }

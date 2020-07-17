@@ -2,7 +2,6 @@ module:
   address: 0
   admin_styles: 0
   admin_toolbar: 0
-  admin_toolbar_search: 0
   admin_toolbar_tools: 0
   adminimal_admin_toolbar: 0
   anchor_exposed_filter: 0
@@ -27,7 +26,6 @@ module:
   dblog: 0
   devel: 0
   devel_entity_updates: 0
-  draggableviews: 0
   dynamic_page_cache: 0
   editor: 0
   embed: 0
@@ -46,12 +44,12 @@ module:
   help: 0
   history: 0
   image: 0
-  image_lazy_loader: 0
   kint: 0
   language: 0
   layout_builder: 0
   layout_discovery: 0
   layout_library: 0
+  lazy: 0
   link: 0
   locale: 0
   media: 0
@@ -95,7 +93,6 @@ module:
   vem_migrate_oembed: 0
   video_embed_field: 0
   video_embed_media: 0
-  views_block_filter_block: 0
   views_ui: 0
   weight: 0
   workflows: 0
@@ -114,4 +111,4 @@ theme:
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 langcode: hu
-profile: standard
+profile: null

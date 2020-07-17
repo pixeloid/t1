@@ -1,0 +1,25 @@
+uuid: 15b7db2c-1522-48c5-87c3-a32891d310b3
+langcode: hu
+status: false
+dependencies:
+  module:
+    - system
+  theme:
+    - monoset
+_core:
+  default_config_hash: NDwadleLD3YVSbDUaakxyYZyINYtkFtOVGShfq4kWy8
+id: monoset_branding
+theme: monoset
+region: content
+weight: 5
+provider: null
+plugin: system_branding_block
+settings:
+  id: system_branding_block
+  label: 'Webhely márkázása'
+  provider: system
+  label_display: '0'
+  use_site_logo: true
+  use_site_name: true
+  use_site_slogan: true
+visibility: {  }

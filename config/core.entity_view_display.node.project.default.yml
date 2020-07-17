@@ -4,17 +4,26 @@ status: true
 dependencies:
   config:
     - field.field.node.project.body
+    - field.field.node.project.field_architecture
     - field.field.node.project.field_category
+    - field.field.node.project.field_contributors
+    - field.field.node.project.field_cover_image
     - field.field.node.project.field_cover_image_media
     - field.field.node.project.field_design_end
-    - field.field.node.project.field_function
+    - field.field.node.project.field_design_start
     - field.field.node.project.field_gallery
+    - field.field.node.project.field_hero_image
     - field.field.node.project.field_hero_image_media
+    - field.field.node.project.field_interiour_design
+    - field.field.node.project.field_location
     - field.field.node.project.field_meta_description
     - field.field.node.project.field_meta_keywords
     - field.field.node.project.field_meta_title
+    - field.field.node.project.field_process_end
+    - field.field.node.project.field_process_start
     - field.field.node.project.field_project_properties
     - field.field.node.project.field_subtitle
+    - field.field.node.project.field_szures_kategoria
     - field.field.node.project.field_weight
     - node.type.project
   module:
@@ -26,9 +35,9 @@ third_party_settings:
   field_group:
     group_main_details:
       children:
+        - field_design_start
         - field_design_end
         - field_category
-        - field_function
         - field_project_properties
       parent_name: ''
       weight: 2
@@ -61,7 +70,7 @@ content:
     weight: 8
     label: hidden
     settings:
-      link: false
+      link: true
     third_party_settings: {  }
     type: entity_reference_label
     region: content
@@ -74,13 +83,14 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
-  field_function:
-    weight: 9
+  field_design_start:
+    weight: 6
     label: hidden
     settings:
-      link: false
+      thousand_separator: ''
+      prefix_suffix: true
     third_party_settings: {  }
-    type: entity_reference_label
+    type: number_integer
     region: content
   field_gallery:
     type: entity_reference_entity_view
@@ -124,7 +134,7 @@ content:
     region: content
   field_project_properties:
     type: entity_reference_revisions_entity_view
-    weight: 10
+    weight: 9
     label: hidden
     settings:
       view_mode: default
@@ -139,7 +149,16 @@ content:
     type: basic_string
     region: content
 hidden:
+  field_architecture: true
+  field_contributors: true
+  field_cover_image: true
   field_cover_image_media: true
+  field_hero_image: true
+  field_interiour_design: true
+  field_location: true
+  field_process_end: true
+  field_process_start: true
+  field_szures_kategoria: true
   field_weight: true
   flippy_pager: true
   langcode: true

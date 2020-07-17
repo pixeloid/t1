@@ -7,8 +7,6 @@ dependencies:
     - field.field.node.partner.field_cover_image_media
     - field.field.node.partner.field_description
     - field.field.node.partner.field_logo
-    - field.field.node.partner.field_type
-    - field.field.node.partner.field_web
     - node.type.partner
   module:
     - user
@@ -43,7 +41,5 @@ content:
       link: false
     third_party_settings: {  }
 hidden:
-  field_type: true
-  field_web: true
   langcode: true
   links: true

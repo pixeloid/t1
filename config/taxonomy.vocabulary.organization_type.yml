@@ -1,8 +1,0 @@
-uuid: f541e2e6-affe-4283-9047-98ef28c3c0d6
-langcode: hu
-status: true
-dependencies: {  }
-name: 'Organization type'
-vid: organization_type
-description: ''
-weight: 0

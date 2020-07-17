@@ -3,7 +3,6 @@ langcode: hu
 status: true
 dependencies:
   config:
-    - field.field.paragraph.properties.field_newline
     - field.field.paragraph.properties.field_property_name
     - field.field.paragraph.properties.field_property_value
     - paragraphs.paragraphs_type.properties
@@ -12,16 +11,6 @@ targetEntityType: paragraph
 bundle: properties
 mode: default
 content:
-  field_newline:
-    weight: 2
-    label: above
-    settings:
-      format: default
-      format_custom_false: ''
-      format_custom_true: ''
-    third_party_settings: {  }
-    type: boolean
-    region: content
   field_property_name:
     weight: 0
     label: hidden

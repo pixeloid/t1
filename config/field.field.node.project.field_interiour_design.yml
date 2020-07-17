@@ -1,0 +1,19 @@
+uuid: eb4390e2-edaa-468c-87d8-8d2fa3e46c1f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_interiour_design
+    - node.type.project
+id: node.project.field_interiour_design
+field_name: field_interiour_design
+entity_type: node
+bundle: project
+label: Belsőépítészet
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string
