@@ -6,7 +6,9 @@
         spaceBetween: 10,
         centeredSlides: true,
         loop: true,
-        pagination: {
+        preloadImages: true,
+        // Enable lazy loading
+                  pagination: {
           el: '.carousel-gallery .swiper-pagination',
           clickable: true,
         },
@@ -18,15 +20,18 @@
       });
 
 
-      mySwiper.on('slideChange', function () {
-        // $('.carousel-gallery__right').text('#' + (mySwiper.realIndex+1))
-      });
+      // mySwiper.on('slideChange', function () {
+      //   // $('.carousel-gallery__right').text('#' + (mySwiper.realIndex+1))
+      // });
 
       mySwiper.on('imagesReady', function () { 
         mySwiper.update();
         mySwiper.slideTo(2);
        });
 
+       $(window).on('load', function(){
+        mySwiper.update();
+       })
 
       $().fancybox({
         selector: '.media a',

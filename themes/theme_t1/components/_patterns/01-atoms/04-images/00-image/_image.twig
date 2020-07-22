@@ -1,5 +1,4 @@
-{% set image_base_class = image_base_class|default('img') %}
-
+{% set image_base_class = image_base_class|default('lazyload') %}
 <img
   {{ bem(image_base_class, (image_modifiers), image_blockname) }}
   {% if img_srcset %}

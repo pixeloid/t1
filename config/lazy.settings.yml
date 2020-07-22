@@ -1,6 +1,6 @@
 image_fields:
-  media--image--field_media_image--hero: '1'
   media--image--field_media_image--grid_item: '1'
+  media--image--field_media_image--hero: '1'
 alter_tag:
   img: img
   iframe: '0'

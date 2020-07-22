@@ -31,7 +31,7 @@ third_party_settings:
         - field_function
         - field_project_properties
       parent_name: ''
-      weight: 2
+      weight: 3
       format_type: html_element
       region: content
       format_settings:
@@ -51,7 +51,7 @@ bundle: project
 mode: default
 content:
   body:
-    weight: 3
+    weight: 4
     label: hidden
     settings: {  }
     third_party_settings: {  }
@@ -84,7 +84,7 @@ content:
     region: content
   field_gallery:
     type: entity_reference_entity_view
-    weight: 10
+    weight: 8
     label: hidden
     settings:
       view_mode: carousel
@@ -101,21 +101,21 @@ content:
       link: false
     third_party_settings: {  }
   field_meta_description:
-    weight: 6
+    weight: 7
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_meta_keywords:
-    weight: 5
+    weight: 6
     label: hidden
     settings: {  }
     third_party_settings: {  }
     type: basic_string
     region: content
   field_meta_title:
-    weight: 4
+    weight: 5
     label: hidden
     settings:
       link_to_entity: false
@@ -138,9 +138,13 @@ content:
     third_party_settings: {  }
     type: basic_string
     region: content
+  flippy_pager:
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden:
   field_cover_image_media: true
   field_weight: true
-  flippy_pager: true
   langcode: true
   links: true
