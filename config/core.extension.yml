@@ -72,6 +72,7 @@ module:
   path: 0
   path_alias: 0
   pixeloid_ckeditor_quote: 0
+  profile_switcher: 0
   project_view_mode: 0
   quickedit: 0
   rdf: 0
@@ -114,4 +115,4 @@ theme:
 _core:
   default_config_hash: m2GVq11UAOVuNgj8x0t5fMOPujpvQQ_zxLoaly1BMEU
 langcode: hu
-profile: null
+profile: standard
